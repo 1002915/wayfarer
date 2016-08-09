@@ -1,0 +1,604 @@
+/**
+ * Copyright 2015 Google Inc. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+body {
+  margin: 0;
+}
+
+/* Disable ugly boxes around images in IE10 */
+a img{
+  border: 0px;
+}
+
+::-moz-selection {
+  background-color: #1f1f1f;
+  color: #fff;
+}
+
+::selection {
+  background-color: #1f1f1f;
+  color: #fff;
+}
+
+.wayfarer-search-box .mdl-textfield__input {
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.wayfarer-header .mdl-menu__container {
+  z-index: 50;
+  margin: 0 !important;
+}
+
+
+.mdl-textfield--expandable {
+  width: auto;
+}
+
+.wayfarer-fab {
+  position: absolute;
+  right: 20%;
+  bottom: -26px;
+  z-index: 3;
+  background: #64ffda !important;
+  color: black !important;
+}
+
+.wayfarer-mobile-title {
+  display: none !important;
+}
+
+
+.wayfarer-logo-image {
+  height: 28px;
+  width: 140px;
+}
+
+
+.wayfarer-header {
+  overflow: visible;
+  background-color: white;
+}
+
+  .wayfarer-header .material-icons {
+    color: #767777 !important;
+  }
+
+  .wayfarer-header .mdl-layout__drawer-button {
+    background: transparent;
+    color: #767777;
+  }
+
+  .wayfarer-header .mdl-navigation__link {
+    color: #333333;
+    font-weight: 700;
+    font-size: 14px;
+  }
+
+  .wayfarer-navigation-container {
+    /* Simple hack to make the overflow happen to the left instead... */
+    direction: rtl;
+    -webkit-order: 1;
+        -ms-flex-order: 1;
+            order: 1;
+    width: 500px;
+    transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+        width 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .wayfarer-navigation {
+    /* ... and now make sure the content is actually LTR */
+    direction: ltr;
+    -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    width: 800px;
+  }
+
+  .wayfarer-search-box.is-focused + .wayfarer-navigation-container {
+    opacity: 0;
+    width: 100px;
+  }
+
+
+  .wayfarer-navigation .mdl-navigation__link {
+    display: inline-block;
+    height: 60px;
+    line-height: 68px;
+    background-color: transparent !important;
+    border-bottom: 4px solid transparent;
+  }
+
+    .wayfarer-navigation .mdl-navigation__link:hover {
+      border-bottom: 4px solid #1f1f1f;
+    }
+
+  .wayfarer-search-box {
+    -webkit-order: 2;
+        -ms-flex-order: 2;
+            order: 2;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  .wayfarer-more-button {
+    -webkit-order: 3;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+
+
+.wayfarer-drawer {
+  border-right: none;
+}
+
+  .wayfarer-drawer-separator {
+    height: 1px;
+    background-color: #dcdcdc;
+    margin: 8px 0;
+  }
+
+  .wayfarer-drawer .mdl-navigation__link.mdl-navigation__link {
+    font-size: 14px;
+    color: #333333;
+  }
+
+  .wayfarer-drawer span.mdl-navigation__link.mdl-navigation__link {
+    color: #1f1f1f;
+  }
+
+  .wayfarer-drawer .mdl-layout-title {
+    position: relative;
+    background: #1f1f1f;
+    height: 160px;
+  }
+
+    .wayfarer-drawer .wayfarer-logo-image {
+      position: absolute;
+      bottom: 16px;
+    }
+
+.wayfarer-be-together-section {
+  position: relative;
+  height: auto;
+  width: auto;
+  background-color: #f3f3f3;
+  background: url('images/hello.gif') center 30% no-repeat;
+  background-size: 50%;
+}
+
+.logo-font {
+  font-family: 'Source Code Pro', sans-serif;
+  line-height: 1;
+  color: #333333;
+  font-weight: 700;
+
+}
+
+.wayfarer-slogan {
+  font-size: 60px;
+  padding-top: 100px;
+}
+
+.wayfarer-sub-slogan {
+  font-size: 21px;
+  padding-top: 24px;
+}
+
+.wayfarer-create-character {
+  font-size: 21px;
+  padding-top: 400px;
+}
+
+  .wayfarer-create-character a {
+    text-decoration: none;
+    color: #767777;
+    font-weight: 300;
+  }
+
+.wayfarer-screen-section {
+  position: relative;
+  padding-top: 60px;
+  padding-bottom: 80px;
+}
+
+.wayfarer-screens {
+  text-align: right;
+  width: 100%;
+  white-space: nowrap;
+  overflow-x: auto;
+}
+
+.wayfarer-screen {
+  text-align: center;
+}
+
+.wayfarer-screen .wayfarer-link {
+  margin-top: 16px;
+  display: block;
+  z-index: 2;
+}
+
+.wayfarer-image-link {
+  text-decoration: none;
+}
+
+.wayfarer-wear {
+  display: inline-block;
+  width: 160px;
+  margin-right: 32px;
+}
+
+  .wayfarer-wear .wayfarer-screen-image {
+    width: 40%;
+    z-index: 1;
+  }
+
+
+.wayfarer-phone {
+  display: inline-block;
+  width: 64px;
+  margin-right: 48px;
+}
+
+  .wayfarer-phone .wayfarer-screen-image {
+    width: 100%;
+    z-index: 1;
+  }
+
+
+.wayfarer-tablet {
+  display: inline-block;
+  width: 110px;
+  margin-right: 64px;
+}
+
+  .wayfarer-tablet .wayfarer-screen-image {
+    width: 100%;
+    z-index: 1;
+  }
+
+  .wayfarer-tablet .wayfarer-link {
+    display: block;
+    z-index: 2;
+  }
+
+
+.wayfarer-tv {
+  display: inline-block;
+  width: 300px;
+  margin-right: 80px;
+}
+
+  .wayfarer-tv .wayfarer-screen-image {
+    width: 100%;
+    z-index: 1;
+  }
+
+
+.wayfarer-auto {
+  display: inline-block;
+  width: 300px;
+  overflow: hidden;
+}
+
+  .wayfarer-auto .wayfarer-screen-image {
+    display: block;
+    height: 300px;
+    z-index: 1;
+  }
+
+
+.wayfarer-wear-section {
+  position: relative;
+  background: url('images/placeholder.jpg') center top no-repeat;
+  background-size: cover;
+  height: 800px;
+}
+
+.wayfarer-wear-band {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color: #37474f;
+}
+
+.wayfarer-wear-band-text {
+  max-width: 800px;
+  margin-left: 25%;
+  padding: 24px;
+  text-align: left;
+  color: white;
+}
+
+  .wayfarer-wear-band-text p {
+    padding-top: 8px;
+  }
+
+.wayfarer-link {
+  text-decoration: none;
+  color: #1f1f1f !important;
+}
+
+  .wayfarer-link:hover {
+    color: #b3d4fc !important;
+  }
+
+  .wayfarer-link .material-icons {
+    position: relative;
+    top: -1px;
+    vertical-align: middle;
+  }
+
+.wayfarer-alt-link {
+  text-decoration: none;
+  color: #64ffda !important;
+  font-size: 16px;
+}
+
+  .wayfarer-alt-link:hover {
+    color: #00bfa5 !important;
+  }
+
+  .wayfarer-alt-link .material-icons {
+    position: relative;
+    top: 6px;
+  }
+
+.wayfarer-customized-section {
+  text-align: center;
+}
+
+.wayfarer-customized-section-text {
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 80px 16px 0 16px;
+}
+
+  .wayfarer-customized-section-text p {
+    padding-top: 16px;
+  }
+
+.wayfarer-customized-section-image {
+  background: url('images/devices.jpg') center top no-repeat;
+  background-size: cover;
+  height: 400px;
+}
+
+.wayfarer-more-section {
+  padding: 80px 0;
+  max-width: 1044px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+  .wayfarer-more-section .wayfarer-section-title {
+    margin-left: 12px;
+    padding-bottom: 24px;
+  }
+
+.wayfarer-card-container {
+}
+
+  .wayfarer-card-container .mdl-card__media {
+    overflow: hidden;
+    background: transparent;
+  }
+
+    .wayfarer-card-container .mdl-card__media img {
+      width: 100%;
+    }
+
+  .wayfarer-card-container .mdl-card__title {
+    background: transparent;
+    height: auto;
+  }
+
+  .wayfarer-card-container .mdl-card__title-text {
+    color: black;
+    height: auto;
+  }
+
+  .wayfarer-card-container .mdl-card__supporting-text {
+    height: auto;
+    color: black;
+    padding-bottom: 56px;
+  }
+
+  .wayfarer-card-container .mdl-card__actions {
+    position: absolute;
+    bottom: 0;
+  }
+
+  .wayfarer-card-container .mdl-card__actions a {
+    border-top: none;
+    font-size: 16px;
+  }
+
+.wayfarer-footer {
+  background-color: #fafafa;
+  position: relative;
+}
+
+  .wayfarer-footer a:hover {
+    color: #1f1f1f;
+  }
+
+  .wayfarer-footer .mdl-mega-footer--top-section::after {
+    border-bottom: none;
+  }
+
+  .wayfarer-footer .mdl-mega-footer--middle-section::after {
+    border-bottom: none;
+  }
+
+  .wayfarer-footer .mdl-mega-footer--bottom-section {
+    position: relative;
+  }
+
+  .wayfarer-footer .mdl-mega-footer--bottom-section a {
+    margin-right: 2em;
+  }
+
+  .wayfarer-footer .mdl-mega-footer--right-section a .material-icons {
+    position: relative;
+    top: 6px;
+  }
+
+
+.wayfarer-link-menu:hover {
+  cursor: pointer;
+}
+
+
+/**** Mobile layout ****/
+@media (max-width: 900px) {
+  .wayfarer-navigation-container {
+    display: none;
+  }
+
+  .wayfarer-title {
+    display: none !important;
+  }
+
+  .wayfarer-mobile-title {
+    display: block !important;
+    position: absolute;
+    left: calc(50% - 70px);
+    top: 12px;
+    transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* WebViews in iOS 9 break the "~" operator, and WebViews in OS X 10.10 break
+     consecutive "+" operators in some cases. Therefore, we need to use both
+     here to cover all the bases. */
+  .wayfarer.wayfarer-search-box.is-focused ~ .wayfarer-mobile-title,
+  .wayfarer-search-box.is-focused + .wayfarer-navigation-container + .wayfarer-mobile-title {
+    opacity: 0;
+  }
+
+  .wayfarer-more-button {
+    display: none;
+  }
+
+  .wayfarer-search-box.is-focused {
+    width: calc(100% - 48px);
+  }
+
+  .wayfarer-search-box .mdl-textfield__expandable-holder {
+    width: 100%;
+  }
+
+  .wayfarer-be-together-section {
+    height: 350px;
+  }
+
+  .wayfarer-slogan {
+    font-size: 26px;
+    margin: 0 16px;
+    padding-top: 24px;
+  }
+
+  .wayfarer-sub-slogan {
+    font-size: 16px;
+    margin: 0 16px;
+    padding-top: 8px;
+  }
+
+  .wayfarer-create-character {
+    padding-top: 200px;
+    font-size: 16px;
+  }
+
+  .wayfarer-create-character img {
+    height: 12px;
+  }
+
+  .wayfarer-fab {
+    display: none;
+  }
+
+  .wayfarer-wear-band-text {
+    margin-left: 0;
+    padding: 16px;
+  }
+
+  .wayfarer-footer .mdl-mega-footer--bottom-section {
+    display: none;
+  }
+}
+
+.wayfarer-title.mdl-layout-title{
+  color: #333333;
+}
+
+.social {
+  width:100%;
+  height:100%;
+}
+
+.container {
+  width:100%;
+  height:auto;
+  background-color: #f2f2f2;
+  box-sizing:border-box;
+  padding:10px;
+  margin-bottom:10px;
+  overflow:hidden;
+}
+
+.title {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.bold {
+  font-weight:700;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.codebox {
+    border:1px solid black;
+    background-color:#333333;
+    overflow:hidden;    
+    padding:10px;
+    width:100%;
+    box-sizing:border-box;
+
+}
+.codebox code {
+    font-size:0.9em;
+    color: #f2f2f2;
+  }
+
+.head-text {
+    font-size:1.1em;
+}
+
+.world-container {
+  width: 100%;
+  height:auto;
+}
+
+.world-image {
+  width:100%;
+}
+
