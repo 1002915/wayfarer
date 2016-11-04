@@ -1,55 +1,143 @@
-<body>
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-
-      <div class="wayfarer-header mdl-layout__header mdl-layout__header--waterfall">
-        <div class="mdl-layout__header-row">
-          <span class="wayfarer-title mdl-layout-title">
-            <img class="wayfarer-logo-image black" src="images/logo.png">
-          </span>
-          <!-- Add spacer, to align navigation to the right in desktop -->
-          <div class="wayfarer-header-spacer mdl-layout-spacer"></div>
-          <div class="wayfarer-search-box mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right mdl-textfield--full-width">
-            <label class="mdl-button mdl-js-button mdl-button--icon" for="search-field">
-              <i class="material-icons">search</i>
-            </label>
-            <div class="mdl-textfield__expandable-holder">
-              <input class="mdl-textfield__input" type="text" id="search-field">
-            </div>
+<!-- MODAL BOX START -->
+  <div id="modal" class="popupContainer" style="display:none;">
+    <span class="title-span">Login or Register</span>
+    <section class="popupBody">
+<!-- LOGIN SECTION -->
+      <div id="login-modal">
+        <form action="checklogin.php" method="post">
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon1"><i class="fa fa-envelope-open-o" aria-hidden="true"></i></span>
+            <input type="text" name="email_post" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
           </div>
-          <!-- Navigation -->
-          <div class="wayfarer-navigation-container">
-            <nav class="wayfarer-navigation mdl-navigation">
-              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Colours</a>
-              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Fonts</a>
-              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">Buttons</a>
-              <a class="mdl-navigation__link mdl-typography--text-uppercase" href="">more</a>
-            </nav>
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon1"><i class="fa fa-lock" aria-hidden="true"></i></span>
+            <input type="password" name="password" class="form-control" placeholder="Password" aria-describedby="basic-addon1">
           </div>
-          <span class="wayfarer-mobile-title mdl-layout-title">
-            <img class="wayfarer-logo-image" src="images/logo.png">
-          </span>
-          <button class="wayfarer-more-button mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="more-button">
-            <i class="material-icons">more_vert</i>
-          </button>
-          <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right mdl-js-ripple-effect" for="more-button">
-            <li class="mdl-menu__item">Contact Us</li>
-            <li class="mdl-menu__item">Share</li>
-          </ul>
+                  <div class="header-nav">
+          <a href="#" class="black-text register">Not a member? Register now!</a><br><BR>
+          <a href="#" class="black-text">Forgot Password?</a><BR><BR>
         </div>
+          <input class="btn register-login-submit" type="submit" value="login">
+        </form>
       </div>
+<!-- USER REGISTER FORM -->
+      <div id="register-form">
+        <form action="registeruser.php" method="post">
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon1"><i class="fa fa-user-o" aria-hidden="true"></i></span>
+            <input type="text" placeholder="First Name" name="first_name" class="form-control" aria-describedby="basic-addon1">
+          </div>
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon1"><i class="fa fa-users" aria-hidden="true"></i></span>
+            <input type="text" placeholder="Last Name" name="last_name" class="form-control" aria-describedby="basic-addon1">
+          </div>
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon1"><i class="fa fa-address-card" aria-hidden="true"></i></span>
+            <input type="text" placeholder="User Name" name="user_name" class="form-control" aria-describedby="basic-addon1">
+          </div>
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon1"><i class="fa fa-mobile" aria-hidden="true"></i></span>
+            <input type="text" placeholder="phone" name="phone_number" class="form-control" aria-describedby="basic-addon1">
+          </div>
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon1"><i class="fa fa-envelope-open-o" aria-hidden="true"></i></span>
+            <input type="text" name="email" class="form-control" placeholder="email" aria-describedby="basic-addon1">
+          </div>
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon1"><i class="fa fa-lock" aria-hidden="true"></i></span>
+            <input type="password" placeholder="Password" name="password" class="form-control" aria-describedby="basic-addon1">
+          </div>
+          <input class="btn register-login-submit" type="submit" value="Register!">
+        </form>      
+      </div>
+    </section>
+  </div> <!-- End of modal box popup -->
+<!-- Put all 'logged in' content here. It is only available when the session has been set (user logged in) -->
+<?php if (isset($_SESSION['email'])) { ?>
+<div class="navigation-bar">
+  <div class="search-container"></div>
+    <nav class="nav-items">
+      <ul>
+        <a href="#modal" class="btn modal_trigger loginbutton"><li>Add Review</li></a>
+        <a href="#modal" class="btn modal_trigger loginbutton"><li>Add Review</li></a>
+        <a href="logout.php" class="btnregisterbutton"><li>Logout</li></a>
 
-      <div class="wayfarer-drawer mdl-layout__drawer">
-        <span class="mdl-layout-title">
-          <img class="wayfarer-logo-image" src="images/logowhite.png">
-        </span>
-        <nav class="mdl-navigation">
-          <a class="mdl-navigation__link" href="">Colours</a>
-          <a class="mdl-navigation__link" href="">Fonts</a>
-          <a class="mdl-navigation__link" href="">Buttons</a>
-          <a class="mdl-navigation__link" href="">More</a>
-          <a class="mdl-navigation__link" href="">Contact Us</a>
-          <a class="mdl-navigation__link" href="">Share</a>
-          <a class="mdl-navigation__link" href="">Search</a>
-          <div class="wayfarer-drawer-separator"></div>
-        </nav>
+      </ul>
+    </nav>
+</div>
+
+<?php } else echo''; ?>
+<!-- End of user logged in content -->
+<?php if (!isset($_SESSION['email'])) { ?>
+<div class="navigation-bar">
+<div class="logo-container">
+      <img class="logo" src="images/logodark.svg">
+      <span><h3>WAYFARER</h3></span>
+    </div>
+       <div class="search-container-active">
+      <input type="text" name="search-page" placeholder="search" class="search-bar">
+      <button type="submit" class="search-button" name="search" value="SEARCH"><i class="fa fa-search white" aria-hidden="true"></i></button></div>
+    <nav class="nav-items">
+      <ul>
+        <a href="#modal" class="btn modal_trigger loginbutton"><li>Login</li></a>
+<!--        <a href="#modal" class="btn modal_trigger registerbutton"><li>REGISTER</li></a> -->
+      </ul>
+    </nav>
+
+<!-- MODAL BOX START -->
+  <div id="modal" class="popupContainer" style="display:none;">
+    <span class="title-span">Login or Register</span>
+    <section class="popupBody">
+<!-- LOGIN SECTION -->
+      <div id="login-modal">
+        <div class="header-nav">
+          <a href="#" class="black-text register">Not a member? Register now!</a><br>
+          <a href="#" class="black-text">Forgot Password?</a>
+        </div>
+        <form action="checklogin.php" method="post">
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon1">@</span>
+            <input type="text" name="email_post" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+          </div>
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon1">>_<</span>
+            <input type="password" name="password" class="form-control" placeholder="Password" aria-describedby="basic-addon1">
+          </div>
+          <input class="btn" type="submit" value="login">
+        </form>
       </div>
+<!-- USER REGISTER FORM -->
+      <div id="register-form">
+        <form action="registeruser.php" method="post">
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon1">First Name</span>
+            <input type="text" name="first_name" class="form-control" aria-describedby="basic-addon1">
+          </div>
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon1">Last Name</span>
+            <input type="text" name="last_name" class="form-control" aria-describedby="basic-addon1">
+          </div>
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon1">User name</span>
+            <input type="text" name="user_name" class="form-control" aria-describedby="basic-addon1">
+          </div>
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon1">Phone</span>
+            <input type="text" name="phone_number" class="form-control" aria-describedby="basic-addon1">
+          </div>
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon1">@</span>
+            <input type="text" name="email" class="form-control" placeholder="email" aria-describedby="basic-addon1">
+          </div>
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon1">Password</span>
+            <input type="password" name="password" class="form-control" aria-describedby="basic-addon1">
+          </div>
+          <input class="btn" type="submit" value="Register!">
+        </form>      
+      </div>
+    </section>
+  </div> <!-- End of modal box popup -->
+</div> <!-- END OF Navigation bar DIV -->
+<?php }; ?>
+<div class="page-container">

@@ -16,12 +16,69 @@ time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
+	font-family: 'Raleway', sans-serif;
 	vertical-align: baseline;
+	color: #c84348;
+}
+
+h1, h2, h3, h4, h5, h6, li, span {
+	font-family: 'Source Code Pro', monospace;
+}
+
+h1 {
+	font-weight: 700;
+	font-size: 86px;
+	color:#f2f2f2;
+}
+
+h2 {
+	font-weight: 700;
+	font-size: 62px;
+	color: #f2f2f2;
+}
+
+h3 {
+	font-family: 'Source Code Pro', monospace;
+	font-weight: 700;
+	color: #393e46;;
+}
+
+h4 {
+	font-weight: 400;;;;
+	font-size: 1.8em;
+	text-align:center;
+	color: #f2f2f2;
+	line-height: 1.4;
+	font-family: 'Raleway', sans-serif;
+	letter-spacing: 1px;
+	max-width: 500px;;;;
+}
+
+h5 {
+	font-weight: 400;
+	font-size: 16px;
+	text-align:left;
+	font-family: 'Raleway', sans-serif;
+	text-shadow: 0 1px 1px rgba(0,0,0,0.11), 0 1px 1px rgba(0,0,0,0.11);
+	line-height:1.4em;
+	color: #f2f2f2;
+}
+
+h6 {
+	font-weight: 700;
+	font-size: 3em;
+	font-family: 'Source Code Pro', monospace;
+}
+
+p {
+	font-size: 1em;
+	line-height: 1.1em;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
+	font-family: 'Raleway', sans-serif;
 }
 body {
 	line-height: 1;
@@ -41,3 +98,7 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+label { color:black; font-size: 0.9em;}
+
+span {font-family: 'Raleway', sans-serif;}

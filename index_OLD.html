@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- META DATA -->
+  <meta charset="utf-8">
+  <title>Wayfarer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="Wayfarer." />
+  <meta property="og:description" content="Get Lost." />
+  <meta property="og:image" content="images/ogimage.jpg" />
+  <meta name="keywords" content="travel,student,map,world,help,currency,explore,lost,wayfarer,wander,trip,moving">
+  <meta name="author" content="Web-Ish">
+  <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+  <link rel="icon" href="images/favicon.png" type="image/x-icon">
+  <!--STYLESHEETS -->
+  <link rel="stylesheet" type="text/css" href="css/reset.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <!--JQUERY-->
+  <script src="js/granim.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <!--FONTS-->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates:400,700" rel="stylesheet">
+</head>
+
+<body>
+<canvas id="canvas-basic"></canvas>
+<div class="page-container">
+  <div class="navigation-bar">
+    <div class="logo-container">
+      <img class="logo" src="images/logo.svg">
+      WAYFARER
+    </div>
+    <div class="search-container">
+      <input type="text" name="search-page" placeholder="search" class="search-bar">
+      <input type="submit" name="search" value="SEARCH">
+    </div>
+    <nav class="nav-items">
+      <ul>
+        <li>LOGIN</li>
+        <li>REGISTER</li>
+      </ul>
+    </nav>
+  </div>
+
+<div class="sky">
+    <div class="clouds_one"></div>
+  </div>
+
+  <div class="landing-container">
+    
+          <p>A STARTING POINT FOR TRAVELLERS TO FIND INSPIRATION AND GUIDANCE TO THE WORLD</p>
+          <input type="submit" value="GET LOST" name="getlost">
+
+  </div>
+
+
+</div>
+<script>
+var granimInstance = new Granim({
+    element: '#canvas-basic',
+    name: 'basic-gradient',
+    direction: 'top-bottom',
+    opacity: [1, 1],
+    isPausedWhenNotInView: true,
+    states : {
+        "default-state": {
+            gradients: [
+                ['#02AAB0', '#00CDAC'],
+                ['#DA22FF', '#9733EE']
+            ]
+        }
+    }
+});
+</script>
+</body>
