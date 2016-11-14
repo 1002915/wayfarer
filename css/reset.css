@@ -80,9 +80,6 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 	font-family: 'Raleway', sans-serif;
 }
-body {
-	line-height: 1;
-}
 ol, ul {
 	list-style: none;
 }
@@ -102,3 +99,5 @@ table {
 label { color:black; font-size: 0.9em;}
 
 span {font-family: 'Raleway', sans-serif;}
+
+a:link { text-decoration:none; }

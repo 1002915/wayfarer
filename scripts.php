@@ -29,5 +29,10 @@
     });
   })
 </script>
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip(); 
+});
+</script>
 
 </body> <!-- DO NOT DELETE BODY TAG!!! No content below this line. Body start tag is in the header.php file. -->

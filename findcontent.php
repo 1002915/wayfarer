@@ -1,19 +1,18 @@
 <div class="world-map-container">
-  <div class="world-map">
-    <image class="north-america" src="images/continents/continent_north_america.svg">
-    <image class="europe" src="images/continents/continent_europe.svg">
-    <image class="asia" src="images/continents/continent_asia.svg">
-    <image class="south-america" src="images/continents/continent_south_america.svg">
-    <image class="africa" src="images/continents/continent_africa.svg">
-    <image class="aunz" src="images/continents/continent_aunz.svg">
-  </div></div>
+    <image data-toggle="tooltip" title="North America" class="north-america" src="images/continents/continent_north_america.svg">
+    <image data-toggle="tooltip" title="Europe" class="europe" src="images/continents/Eu-01.svg">
+    <image data-toggle="tooltip" title="Asia" class="asia" src="images/continents/Asia.svg">
+    <image data-toggle="tooltip" title="South America" class="south-america" src="images/continents/continent_south_america.svg">
+    <image data-toggle="tooltip" title="Africa" class="africa" src="images/continents/continent_africa.svg">
+    <image data-toggle="tooltip" title="Australia & New Zealand" class="aunz" src="images/continents/continent_aunz.svg">
+</div>
     <ul class="country-list">
       <li class="country-list-item">NORTH AMERICA</li>
       <li class="country-list-item">SOUTH AMERICA</li>
       <li class="country-list-item">AUSTRALIA</li>
-      <a href="europe.html"><li class="country-list-item">EUROPE</li></a>
+      <a class="country-list-item" href="europe.html"><li>EUROPE</li></a>
       <li class="country-list-item">ASIA</li>
       <li class="country-list-item">ANTARCTICA</li>  
     <ul>
-  </div>
 </div>
+<a href="#" data-toggle="tooltip" title="Hooray!">Hover over me</a>
