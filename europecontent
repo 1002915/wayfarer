@@ -1,9 +1,9 @@
 <div class="world-map-container">
 <div class="animsition">
-    <a href="#">
+    <a href="javascript:delay('index.php')">
       <image data-toggle="tooltip" title="North America" class="north-america zoomTarget" data-targetsize="0.85" src="images/continents/continent_north_america.svg"/>
     </a>
-    <a href="javascript:delay('europe.php')">
+    <a href="javascript:delay('europe.php')" class="animsition-link">
       <image data-toggle="tooltip" title="Europe" class="europe zoomTarget" src="images/continents/Eu-01.svg">
     </a>
     <a href="javascript:delay('index.php')">
@@ -29,3 +29,4 @@
       <li class="country-list-item">ANTARCTICA</li>  
     <ul>
 </div>
+<a href="#" data-toggle="tooltip" title="Hooray!">Hover over me</a>

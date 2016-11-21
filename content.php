@@ -1,7 +1,7 @@
 <div class="landing-container">
   <div class="logo-main-container">
   </div>
-  <h2 class="new-font">YOUR STARTING POINT</h2>
+  <h2 class="new-font"><a href="find.php" class="animition-link">YOUR STARTING POINT</h2>
   <h4>for finding inspiration and guidance to the world.</h4>
   <form action="find.php">
     <input type="submit" value="GET LOST" name="getlost">

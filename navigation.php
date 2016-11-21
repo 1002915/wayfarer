@@ -58,8 +58,7 @@
   <div class="search-container"></div>
     <nav class="nav-items">
       <ul>
-        <a href="#modal" class="btn modal_trigger loginbutton"><li>Add Review</li></a>
-        <a href="#modal" class="btn modal_trigger loginbutton"><li>Add Review</li></a>
+        <a href="addreview.php" class="btn"><li>Add Review</li></a>
         <a href="logout.php" class="btnregisterbutton"><li>Logout</li></a>
 
       </ul>
@@ -71,7 +70,7 @@
 <?php if (!isset($_SESSION['email'])) { ?>
 <div class="navigation-bar">
 <div class="logo-container">
-      <img class="logo" src="images/logodark.svg">
+      <a href="index.php"><img class="logo" src="images/logodark.svg"></a>
       <span><h3>WAYFARER</h3></span>
     </div>
        <div class="search-container-active">
@@ -139,5 +138,10 @@
     </section>
   </div> <!-- End of modal box popup -->
 </div> <!-- END OF Navigation bar DIV -->
-<?php }; ?>
+<?php };
+$cityTimezone = 0;
+$population = 0;
+$beerCost = 0;
+$cityName = 'London'; 
+ ?>
 <div class="page-container">
