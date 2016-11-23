@@ -1,5 +1,5 @@
 .country-map-container { min-height: 500px; width: 500px; margin-top: 40px; box-sizing: border-box; padding: 10px; }
-.world-map-container { position:relative; height: 350px; width: 740px; box-sizing: border-box; padding: 10px; margin: 0 auto; margin-top: 77px; }
+.world-map-container { position:relative; height: 350px; width: 740px; box-sizing: border-box; padding: 10px; margin: 0 auto; }
 
 .aunz, .africa, .asia, .europe, .south-america, .north-america { transition-duration: 0.2s; } 
 .africa {z-index: 10;}

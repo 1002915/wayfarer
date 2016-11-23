@@ -1,4 +1,5 @@
 <?php 
+include('connection.php');
 include('head.php');
 include('navigation.php');
 include('descriptions.php');

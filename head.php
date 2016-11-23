@@ -1,4 +1,5 @@
 <?php session_start(); ?>
+<?php include ('functions.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,11 +21,12 @@
   <link rel="stylesheet" href="css/worldmap.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animsition/3.4.3/css/animsition.min.css">
   <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
 
   <!--JQUERY-->
-  <script src="js/granim.min.js"></script>
-  <script src="js/moment.js"></script>
+
   <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <script type="text/javascript" src="js/jquery.leanModal.min.js"></script>
@@ -32,6 +34,9 @@
   <script src="https://use.fontawesome.com/5f2da8aac6.js"></script>
   <script src="js/jquery.zoomooz.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animsition/3.4.3/js/jquery.animsition.min.js"></script>
+    <script src="js/granim.min.js"></script>
+  <script src="js/moment.js"></script>
+  <script src="js/jquery.magnific-popup.js"></script>
 
   <!--FONTS-->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700|Source+Code+Pro" rel="stylesheet">
@@ -39,4 +44,6 @@
 </head>
 
 <body>
-<div class="animsition">
+<div class="animsition zoomViewport">
+
+ 

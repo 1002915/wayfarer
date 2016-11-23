@@ -13,12 +13,19 @@
             <span class="input-group-addon" id="basic-addon1"><i class="fa fa-lock" aria-hidden="true"></i></span>
             <input type="password" name="password" class="form-control" placeholder="Password" aria-describedby="basic-addon1">
           </div>
-                  <div class="header-nav">
-          <a href="#" class="black-text register">Not a member? Register now!</a><br><BR>
-          <a href="#" class="black-text">Forgot Password?</a><BR><BR>
-        </div>
-          <input class="btn register-login-submit" type="submit" value="login">
+
+            <div class="header-nav">
+              <a href="#" class="black-text">Forgot Password?</a><BR><BR>
+            </div>
+                      <div class="action-area">
+            <input class="btn btn-default btn-success" type="submit" value="login">
         </form>
+        <p> &nbsp;&nbsp;or&nbsp;&nbsp;</p>
+    
+        <form action="#" method="post" class="register">
+                  <input class="btn btn-default basic register" type="submit" value="Register now">
+        </form>
+
       </div>
 <!-- USER REGISTER FORM -->
       <div id="register-form">
@@ -52,34 +59,30 @@
       </div>
     </section>
   </div> <!-- End of modal box popup -->
-<!-- Put all 'logged in' content here. It is only available when the session has been set (user logged in) -->
-<?php if (isset($_SESSION['email'])) { ?>
-<div class="navigation-bar">
-  <div class="search-container"></div>
-    <nav class="nav-items">
-      <ul>
-        <a href="addreview.php" class="btn"><li>Add Review</li></a>
-        <a href="logout.php" class="btnregisterbutton"><li>Logout</li></a>
 
-      </ul>
-    </nav>
-</div>
 
-<?php } else echo''; ?>
-<!-- End of user logged in content -->
-<?php if (!isset($_SESSION['email'])) { ?>
+
+
+
+
 <div class="navigation-bar">
 <div class="logo-container">
       <a href="index.php"><img class="logo" src="images/logodark.svg"></a>
-      <span><h3>WAYFARER</h3></span>
+      <span><a href="index.php"><h3>WAYFARER</h3></a></span>
     </div>
        <div class="search-container-active">
       <input type="text" name="search-page" placeholder="search" class="search-bar">
-      <button type="submit" class="search-button" name="search" value="SEARCH"><i class="fa fa-search white" aria-hidden="true"></i></button></div>
+     </div>
     <nav class="nav-items">
       <ul>
-        <a href="#modal" class="btn modal_trigger loginbutton"><li>Login</li></a>
-<!--        <a href="#modal" class="btn modal_trigger registerbutton"><li>REGISTER</li></a> -->
+        <?php if (!isset($_SESSION['email'])) { ?>
+        <a href="#modal" class="btn btn-success modal_trigger"><li>Login</li></a>
+        <?php };?>
+        <?php if (isset($_SESSION['email'])) { ?>
+  <a href="addreview.php" class="btn"><li>Add Review</li></a>
+  <a href="logout.php" class="btnregisterbutton"><li>Logout</li></a>
+<?php } else echo''; ?>
+<!-- End of user logged in content -->
       </ul>
     </nav>
 
@@ -138,10 +141,30 @@
     </section>
   </div> <!-- End of modal box popup -->
 </div> <!-- END OF Navigation bar DIV -->
-<?php };
+<?php 
 $cityTimezone = 0;
 $population = 0;
 $beerCost = 0;
 $cityName = 'London'; 
  ?>
+ <ol class="breadcrumb">
+<?php
+
+if($location = substr(dirname($_SERVER['PHP_SELF']), 1)) 
+   $dirlist = explode('/', $location);
+
+
+else 
+   $dirlist = array();
+ $count = array_push($dirlist, basename($_SERVER['PHP_SELF']));
+ $fixed = str_replace('.php', ' ', $dirlist);
+
+$address = 'http://'.$_SERVER['HTTP_HOST'];
+echo '<li><a href="'.$address.'">Home</a></li>';
+for($i = 0; $i < $count; $i++)
+   echo '<li><a href="'.($address .= '/'.$fixed[$i]).'">'.$fixed[$i].'</a></li>';
+
+?>
+</ol>
+<div class="zoomContainer">
 <div class="page-container">

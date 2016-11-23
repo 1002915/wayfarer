@@ -1,7 +1,9 @@
 <div class="landing-container">
+
   <div class="logo-main-container">
   </div>
-  <h2 class="new-font"><a href="find.php" class="animition-link">YOUR STARTING POINT</h2>
+
+  <h2 class="new-font">YOUR STARTING POINT</h2>
   <h4>for finding inspiration and guidance to the world.</h4>
   <form action="find.php">
     <input type="submit" value="GET LOST" name="getlost">
@@ -15,9 +17,9 @@
     <div class="istanbul-container"></div>
   </div>
   <div class="about-text">
-    <h5>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</h5><br>
-    <h5>The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using ‘Content here, content here’, making it look l readable English.</h5><br>
-    <h5>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for ‘lorem ipsum’ will uncover many web si  still in their infancy. </h5><br>
-    <h5>Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</h5>
+    <h5>“Twenty years from now you will be more disappointed by the things you didn’t do than by the ones you did do.” – Mark Twain</h5><br>
+    <h5>When you're young, travelling alone, or with others can be scary. Wayfarer has listed some of the most popular destinations for young, first time travelers and gives real reviews by real people for those locations.</h5><br>
+    <h5>Feel free to contribute by signing up and leaving a review for a place, event, accomodation, or anything else in whatever destination you've visited.</h5><br>
+    <h5>Think somewhere else in the world should be added? So do we! Let us know where you want listed, and we'll create it.</h5>
   </div>
 </div>

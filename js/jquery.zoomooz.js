@@ -1559,7 +1559,7 @@ if(!$.zoomooz) {
                           ".zoomNotClickable{"+setupSelectionCss(true)+"}"+
                           ".zoomNotClickable:hover{cursor:auto!important;}"+
                           /* padding to fix margin collapse issues */
-                          ".zoomContainer{position:relative;padding:1px;margin:-1px;}";
+                          ".zoomContainer{position:relative;padding:1px;margin:0px;}";
 
         document.getElementsByTagName('head')[0].appendChild(style);
     }

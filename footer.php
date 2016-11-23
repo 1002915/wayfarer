@@ -8,7 +8,6 @@
         <li>HELP</li>
         <li>FACEBOOK</li>
       </ul>
-      <img class="footer-image" src="images/cityscapes/footerbackground.svg">
     </div>
   </div>
 </div>
