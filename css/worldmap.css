@@ -17,6 +17,7 @@
 .country-info-block { width: 40%; margin-top: 30px; }
 .country-big-info-block { width: 100%; margin-top: 30px; }
 
+.continent {width: 100%; height:100%;}
 @media screen and (min-width: 511px) and (max-width: 668px) 
 {
     .world-map-container { width: 490px; height:270px; }
@@ -229,11 +230,11 @@
         z-index:1;
     }
     .europe {
-        width: 191px;
-        position: absolute;
-        top: 15px;
-        right: 353px;
-        z-index: 2;
+    width: 175px;
+    position: absolute;
+    top: 20px;
+    right: 365px;
+    z-index: 2;
     }
 
     .africa {
@@ -255,7 +256,7 @@
     .aunz:hover{width:262px;} 
     .africa:hover{width:226px; top: 151px;} 
     .asia:hover{width:453px; right: -20px;} 
-    .europe:hover{width:201px; right: 360px; top:5px;} 
+    .europe:hover{width:201px; right: 375px; top:5px;} 
     .south-america:hover{width:163px;} 
     .north-america:hover{width:410px;left:-10px;}    
 }
@@ -276,9 +277,7 @@
 }   
 
 .europe-large {
-    width: 75%;
     margin: 0 auto;
-    margin-top: -70px;
     display: block;
 }
 

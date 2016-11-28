@@ -6,163 +6,199 @@ $beerCost = '£4.50 = ($8.71 AUD)';
 ?>
 
 	    <div class="catchy-title">
-	        <h6><?php setTitle($cityName); ?></h6>
+	        <?php setTitle($cityName); ?>,
+	        <div class="sub-heading">United Kingdom</div>
 	    </div>
 			<img class="vector-skyline" src="images/cities/<?php setImage($cityName); ?>.svg">
-		</div>
-	</div>
-</div>
 
-<div class="information-container">
-	<h6> Overview </h6>
-</div>
-	<div class="information-container">
-	    <div class="thumbnail">
-	    	<div class="information-container">
-				<div class="country-big-info-block">
-					<span> Overall Rating: ***** </span><br><br>
-		    		<span> Local Time:<div id="displayMoment"></div></span><br>
-		    		<span> Current Temp:<div id="weather"> </div></span><br>
-		    		<span> Population: <?php echo $population; ?></span><br><br>
-		    		<span> Average pint cost: <?php echo $beerCost; ?> </span><br><br>
-		    		<span> <?php setDescription($cityName); ?></span>
+<div class="ig-grid" data-aos="fade-up"> <!-- INFOGRAPHIC START HERE -->
+
+	<div class="ig-title" data-aos="fade-right">
+		<h6>We thought you should know...</h6>
+	</div>
+		<div class="ig-row" data-aos="fade-up">
+			<div class="ig-item-4">
+				<div class="ig-img">
+					<img class="ig-info-icon-4" src="images/icons/weather.png">
+				</div>
+				<div class="ig-info"><span><div id="weather"> </div></span><br>
+				</div>
+			</div>
+			<div class="ig-item-4">
+				<div class="ig-img">
+					<img class="ig-info-icon-4" src="images/icons/time.png">
+				</div>
+				<div class="ig-info"><span><div id="displayMoment"></div></span><br>
+				</div>
+			</div>
+			<div class="ig-item-4">
+				<div class="ig-img">
+					<img class="ig-info-icon-4" src="images/icons/speak.png">
+				</div>
+				<div class="ig-info">English
+				</div>
+			</div>
+			<div class="ig-item-4">
+				<div class="ig-img">
+					<img class="ig-info-icon-4" src="images/icons/passport.png">
+				</div>
+				<div class="ig-info">Passport
 				</div>
 			</div>
 		</div>
-	</div>
-</div>
- 
-<div class="information-container">
-	<h6> Traveller photos </h6>
-</div>
-<div class="information-container">
-<div class="popup-gallery">
-	<a class="link-flex" href="user/images/13.jpg" title="The Cleaner"><img 			src="user/images/13.jpg" 			width="100%"></a>
-	<a class="link-flex" href="user/images/14.jpg" title="Winter Dance"><img 			src="user/images/14.jpg" 			width="100%"></a>
-	<a class="link-flex" href="user/images/12.jpg" title="The Uninvited Guest"><img 	src="user/images/12.jpg" 			width="100%"></a>
-	<a class="link-flex" href="user/images/13.jpg" title="Oh no, not again!"><img 	src="user/images/13.jpg" 			width="100%"></a>
-</div>
-	</div>
-</div>
 
-<div class="information-container">
-	<h6> Traveller Reviews </h6>
-</div>
+	<div class="ig-title" data-aos="fade-right">
+		<h6>And you should go see...</h6>
+	</div>
+	
+		<div class="ig-row" data-aos="fade-up">
+			<div class="ig-item-2">
+				<div class="ig-img-2">
+					<img class="ig-info-icon-4" src="images/placeholder2.png">
+				</div>
+				<div class="info-container">
+					<div class="ig-info ig-2">Buckingham Palace</div>
+					<div class="ig-info ig-small">the London residence and administrative headquarters of the reigning monarch of the United Kingdom.</div>
+				</div>
+			</div>
 
-<div class="information-container">
-	<div class="row">
-	  <div class="col-sm-6 col-md-4">
-	    <div class="thumbnail">
-	      <img src="user/images/12.jpg" alt="...">
-	      <div class="caption">
-	        <p class="review-title">LONDON WAS REALLY SWEET</p>
-	        <p class="reviewed-by">Reviewed by: Matt Neal on: 16/05/1987</p><br>
-			<p class="review-rating">4 out of 5 Stars</p>
-	        <p class="review-content">Here's a generic entry about London. I can't believe this is a description.</p>
-	        <p><a href="#" class="btn btn-default" role="button">Read more</a></p>
-	      </div>
-	    </div>
-	  </div>
-	  <div class="col-sm-6 col-md-4">
-	    <div class="thumbnail">
-	      <img src="user/images/12.jpg" alt="...">
-	      <div class="caption">
-	        <p class="review-title">LONDON WAS REALLY SWEET</p>
-	        <p class="reviewed-by">Reviewed by: Matt Neal on: 16/05/1987</p><br>
-			<p class="review-rating">4 out of 5 Stars</p>
-	        <p class="review-content">Here's a generic entry about London. I can't believe this is a description.</p>
-	        <p><a href="#" class="btn btn-default" role="button">Read more</a></p>
-	      </div>
-	    </div>
-	  </div>
-	  <div class="col-sm-6 col-md-4">
-	    <div class="thumbnail">
-	      <img src="user/images/12.jpg" alt="...">
-	      <div class="caption">
-	        <p class="review-title">LONDON WAS REALLY SWEET</p>
-	        <p class="reviewed-by">Reviewed by: Matt Neal on: 16/05/1987</p><br>
-			<p class="review-rating">4 out of 5 Stars</p>
-	        <p class="review-content">Here's a generic entry about London. I can't believe this is a description.</p>
-	        <p><a href="#" class="btn btn-default" role="button">Read more</a></p>
-	      </div>
-	    </div>
-	  </div>
+			<div class="ig-item-2">
+				<div class="ig-img-2">
+					<img class="ig-info-icon-4" src="images/placeholder2.png">
+				</div>
+				<div class="info-container">
+					<div class="ig-info ig-2">London Eye</div>
+					<div class="ig-info ig-small">One of the worlds largest Ferris Wheels. Gives a perfect view of London.</div>
+				</div>
+			</div>
+		</div>
+		<div class="ig-row" data-aos="fade-up">
+			<div class="ig-item-2">
+				<div class="ig-img-2">
+					<img class="ig-info-icon-4" src="images/placeholder2.png">
+				</div>
+				<div class="info-container">
+					<div class="ig-info ig-2">Tower Bridge</div>
+					<div class="ig-info ig-small">Often mistaken for London Bridge. One of London's most famous landmarks.</div>
+				</div>
+			</div>
+			<div class="ig-item-2">
+				<div class="ig-img-2">
+					<img class="ig-info-icon-4" src="images/placeholder2.png">
+				</div>
+				<div class="info-container">
+					<div class="ig-info ig-2">Tower of London</div>
+					<div class="ig-info ig-small">The bridge crosses the River Thames close to the Tower of London and has become an iconic symbol of London.</div>
+				</div>
+			</div>
+		</div>
+	
+	<div class="ig-title" data-aos="fade-right"">
+		<h6>But don't forget..</h6>
 	</div>
-		<div class="row">
-	  <div class="col-sm-6 col-md-4">
-	    <div class="thumbnail">
-	      <img src="user/images/12.jpg" alt="...">
-	      <div class="caption">
-	        <p class="review-title">LONDON WAS REALLY SWEET</p>
-	        <p class="reviewed-by">Reviewed by: Matt Neal on: 16/05/1987</p><br>
-			<p class="review-rating">4 out of 5 Stars</p>
-	        <p class="review-content">Here's a generic entry about London. I can't believe this is a description.</p>
-	        <p><a href="#" class="btn btn-default" role="button">Read more</a></p>
-	      </div>
-	    </div>
-	  </div>
-	  <div class="col-sm-6 col-md-4">
-	    <div class="thumbnail">
-	      <img src="user/images/12.jpg" alt="...">
-	      <div class="caption">
-	        <p class="review-title">LONDON WAS REALLY SWEET</p>
-	        <p class="reviewed-by">Reviewed by: Matt Neal on: 16/05/1987</p><br>
-			<p class="review-rating">4 out of 5 Stars</p>
-	        <p class="review-content">Here's a generic entry about London. I can't believe this is a description.</p>
-	        <p><a href="#" class="btn btn-default" role="button">Read more</a></p>
-	      </div>
-	    </div>
-	  </div>
-	  <div class="col-sm-6 col-md-4">
-	    <div class="thumbnail">
-	      <img src="user/images/12.jpg" alt="...">
-	      <div class="caption">
-	        <p class="review-title">LONDON WAS REALLY SWEET</p>
-	        <p class="reviewed-by">Reviewed by: Matt Neal on: 16/05/1987</p><br>
-			<p class="review-rating">4 out of 5 Stars</p>
-	        <p class="review-content">Here's a generic entry about London. I can't believe this is a description.</p>
-	        <p><a href="#" class="btn btn-default" role="button">Read more</a></p>
-	      </div>
-	    </div>
-	  </div>
+
+		<div class="ig-row" data-aos="fade-up">
+			<div class="ig-item-3">
+				<div class="ig-img-3">
+					<img class="ig-info-icon-4" src="images/icons/tip.png">
+				</div>
+				<div class="ig-info">Tipping isn't required, unless service is outstanding
+				</div>
+			</div>
+			<div class="ig-item-3">
+				<div class="ig-img-3">
+					<img class="ig-info-icon-4" src="images/icons/tourist.png">
+				</div>
+				<div class="ig-info">Peak tourist months are June - August
+				</div>
+			</div>
+			<div class="ig-item-3">
+				<div class="ig-img-3">
+					<img class="ig-info-icon-4" src="images/icons/currency.png">
+				</div>
+				<div class="ig-info">A beer will cost about <?php echo $beerCost; ?>
+				</div>
+			</div>
+		</div>
+
+	<div class="ig-title" data-aos="fade-right">
+		<h6>And you've GOT to try...</h6>
 	</div>
-</div>
+
+		<div class="ig-row" data-aos="fade-up">
+			<div class="ig-item-4">
+				<div class="ig-img">
+					<img class="ig-info-icon-4" src="images/icons/food1.png">
+				</div>
+				<div class="ig-info">Butter Chicken Curry
+				</div>
+			</div>
+			<div class="ig-item-4">
+				<div class="ig-img">
+					<img class="ig-info-icon-4" src="images/icons/food2.png">
+				</div>
+				<div class="ig-info">English Breakfast
+				</div>
+			</div>
+			<div class="ig-item-4">
+				<div class="ig-img">
+					<img class="ig-info-icon-4" src="images/icons/food3.png">
+				</div>
+				<div class="ig-info">Bangers and Mash
+				</div>
+			</div>
+			<div class="ig-item-4">
+				<div class="ig-img">
+					<img class="ig-info-icon-4" src="images/icons/food4.png">
+				</div>
+				<div class="ig-info">Fish and Chips
+				</div>
+			</div>
+		</div>
+
+	<div class="ig-title" data-aos="fade-right">
+		<h6>You can get around by...</h6>
+	</div>
+
+		<div class="ig-row" data-aos="fade-up">
+			<div class="ig-item-3">
+				<div class="ig-img-3">
+					<img class="ig-info-icon-4" src="images/icons/bus.png">
+				</div>
+				<div class="ig-info">Big Red London Bus service
+				</div>
+			</div>
+			<div class="ig-item-3">
+				<div class="ig-img-3">
+					<img class="ig-info-icon-4" src="images/icons/underground.png">
+				</div>
+				<div class="ig-info">The London Underground train
+				</div>
+			</div>
+			<div class="ig-item-3">
+				<div class="ig-img-3">
+					<img class="ig-info-icon-4" src="images/icons/taxi.png">
+				</div>
+				<div class="ig-info">Famous London Taxi Cabs
+				</div>
+			</div>
+		</div>
+
+</div> <!-- ig box end -->
+
 <!--
-<?php 
+<div class="item" data-aos="fade-up">1</div>
+<div class="item" data-aos="fade-down">2</div>
+<div class="item" data-aos="fade-right">3</div>
+<div class="item" data-aos="fade-left">4</div>
 
-$select = "SELECT * FROM review WHERE R_City = '$cityName'";
-$result = mysqli_query($mysqli, $select);
+<div class="item" data-aos="zoom-in">5</div>
+<div class="item" data-aos="zoom-out">6</div>
 
-while($row = mysqli_fetch_array($result))
-{
-	$id = $row['ID'];
-	$R_TITLE = $row['R_TITLE'];
-	$R_CONTENT = $row['R_CONTENT'];
-	$R_BY = $row['R_BY'];
-	$R_TIME = $row['R_TIME'];
-	$R_DATE = $row['R_DATE'];
-	$R_DRAFT = $row['R_DRAFT'];
-	$R_RATING = $row['R_RATING'];
-	$R_City = $row['R_City'];
+<div class="item" data-aos="slide-up">7</div>
 
-	echo 
-	'<div class="information-container flex">'.
-		'<div class="left-review">'. 
-			'<p class="review-title">'.$R_TITLE . '</p>'.
-			'<p class="review-rating">'.$R_RATING . ' out of 5 Stars</p>'.
-			'<p class="reviewed-by">Reviewed by: '.$R_BY. 'on:'. $R_TIME.'</p><br>'.
-			'<p class="review-content">'.$R_CONTENT.'</p>'.
-
-
-		'</div>'.	
-		'<div class="right-review" style="background-image:url(images/london.svg);">&nbsp;</div>'.
-	'</div>';
-}
-
-?>
-
+<div class="item" data-aos="flip-up">8</div>
+<div class="item" data-aos="flip-down">9</div>
+<div class="item" data-aos="flip-right">10</div>
+<div class="item" data-aos="flip-left">11</div>
 -->
-
-
-</div>
-</div>	
