@@ -2,7 +2,7 @@
     <h6>Now choose a pin</h6>
   </div>
 <div class="world-map-container">
-    <a href="javascript:delay('london.php')"><image title="London" class="pin london-pin zoomTarget" data-targetsize="0.25" src="images/pin.svg"></a>
+    <a href="javascript:delay('london.php')"><image data-toggle="tooltip" title="London" class="pin london-pin zoomTarget" data-targetsize="0.25" src="images/pin.svg"></a>
     <image id="europe-large" title="Europe" class="continent" src="images/continents/Eu-01.svg">
 </div>
 
@@ -17,3 +17,4 @@
       <li class="country-list-item"><a href="northamerica.php" class="animsition-link">Amsterdam</a></li>
     </ul>
 </div>
+

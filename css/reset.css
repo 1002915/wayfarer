@@ -102,3 +102,5 @@ label { color:black; font-size: 0.9em;}
 span {font-family: 'Raleway', sans-serif;}
 
 a:link { text-decoration:none; }
+
+a {display:inline-block;}

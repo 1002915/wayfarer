@@ -1,15 +1,18 @@
   <div class="ig-title" data-aos="fade-right">
     <h6>Click on a continent to explore</h6>
   </div>
-<div class="world-map-container">
-    <div class="">
-        <a href="javascript:delay('europe.php')"><image title="North America" class="north-america zoomTarget" data-targetsize="0.85" src="images/continents/continent_north_america.svg"/></a>
-        <a href="javascript:delay('europe.php')"><image data-targetsize="0.80" title="Europe" class="europe zoomTarget" src="images/continents/Eu-01.svg"/></a>
-        <a href="javascript:delay('index.php')"><image title="Asia" class="asia zoomTarget" data-targetsize="0.95" src="images/continents/Asia.svg"/></a>
-        <a href="javascript:delay('index.php')"><image title="South America" class="south-america zoomTarget" data-targetsize="0.75" src="images/continents/continent_south_america.svg"/></a>
-        <a href="javascript:delay('index.php')"><image title="Africa" class="africa zoomTarget" data-targetsize="0.75" src="images/continents/continent_africa.svg"/></a>
-        <a href="javascript:delay('index.php')"><image title="Australia & New Zealand " class="aunz zoomTarget" data-targetsize="0.55" src="images/continents/continent_aunz.svg"/></a>
-    </div>
+<div class="world-map-container top-margin">
+
+
+<a href="javascript:delay('find.php')"><i class="mg map-wrld-oc zoomTarget" data-targetsize="0.55"></i></a><!--OCEANA-->
+<a href="javascript:delay('find.php')"><i class="mg map-wrld-sa zoomTarget" data-targetsize="0.75"></i></a><!--SOUTH AMERICA-->
+<a href="javascript:delay('find.php')"><i class="mg map-wrld-na zoomTarget" data-targetsize="0.85"></i></a><!--NORTH AMERICA-->
+<a href="javascript:delay('europe.php')"><i class="mg map-wrld-eu zoomTarget" data-targetsize="0.80"></i></a><!--EUROPE-->
+<a href="javascript:delay('find.php')"><i class="mg map-wrld-as zoomTarget" data-targetsize="0.95"></i></a><!--ASIA-->
+<a href="javascript:delay('find.php')"><i class="mg map-wrld-af zoomTarget" data-targetsize="0.75"></i></a><!--AFRICA-->
+<a href="javascript:delay('find.php')"><i class="mg map-wrld-me zoomTarget" data-targetsize="0.75"></i></a><!--MIDDLE EAST-->
+<a href="javascript:delay('find.php')"><i class="mg map-ru      zoomTarget" data-targetsize="0.75"></i></a><!--MIDDLE EAST-->
+
 </div>
 
 

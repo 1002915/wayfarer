@@ -1,9 +1,5 @@
 .country-map-container { min-height: 500px; width: 500px; margin-top: 40px; box-sizing: border-box; padding: 10px; }
-.world-map-container { position:relative; height: 350px; width: 740px; box-sizing: border-box; padding: 10px; margin: 0 auto; }
-
-.aunz, .africa, .asia, .europe, .south-america, .north-america { transition-duration: 0.2s; } 
-.africa {z-index: 10;}
-.europe {z-index: 20;}
+.world-map-container { position:relative; height: 600px; width: 100%; box-sizing: border-box; padding: 10px; margin: 0 auto; background-color: rgba(0, 0, 0, 0.19); }
 
 .country-list { margin: 0 auto; display: flex; justify-content: center; flex-wrap: wrap; }
 .country-list-item:hover { box-shadow: 0 14px 28px rgba(0,0,0,0.25),0 10px 10px rgba(0,0,0,0.22); }
@@ -18,276 +14,99 @@
 .country-big-info-block { width: 100%; margin-top: 30px; }
 
 .continent {width: 100%; height:100%;}
-@media screen and (min-width: 511px) and (max-width: 668px) 
-{
-    .world-map-container { width: 490px; height:270px; }
 
-    .north-america { width: 240px; position: absolute; top: 5px; left: 5px; }
-    .south-america { width: 73px; position: absolute; top: 131px; left: 101px; }
-    .europe { width: 96px; position: absolute; top: 8px; right: 158px; }
-    .asia { width: 200px; position: absolute; top: 5px; right: 0px; }
-    .africa { width: 96px; position: absolute; top: 71px; left: 233px; }
-    .aunz { width: 115px; position: absolute; right: 9px; top: 147px; }
-    .pin {top: 34px;}
-    .aunz:hover { width:125px; } 
-    .africa:hover { width:106px; } 
-    .asia:hover { width:210px; } 
-    .europe:hover { width:106px; } 
-    .south-america:hover { width:83px; } 
-    .north-america:hover { width:250px; }    
+.pin { position: absolute; width: 40px; height:40px; left:30%; }
+.pin:hover { width: 45px; height: 45px; }
+
+.mg { color: #fcf5d0; position: absolute; transition: .6s;}
+.mg:hover { color:rgba(232, 90, 96, 0.88); z-index: 999; transition: 0.6s;}
+
+
+
+@media screen and (min-width: 511px) and (max-width: 668px) {
+
+    .pin {top: 96px;}
+
 }
 
-@media screen and (min-width: 669px) and (max-width: 767px) 
-{
-    .world-map-container { width: 640px; height:370px; }
-    .north-america { width: 287px; position: absolute; top: 5px; left: 5px; }
-    .south-america { width: 97px; position: absolute; top: 155px; left: 117px; }
-    .europe { width: 111px; position: absolute; top: 16px; right: 228px; }
-    .asia { width: 278px; position: absolute; top: 5px; right: 0px; }
-    .africa { width: 121px; position: absolute; top: 89px; left: 291px; }
-    .aunz { width: 188px; position: absolute; right: 9px; top: 202px; transform: perspective(1px) translateZ(0); }
-    .pin {top:70px;}
-    .aunz:hover{width:198px;} 
-    .africa:hover{width:131px;} 
-    .asia:hover{width:288px;} 
-    .europe:hover{width:121px;} 
-    .south-america:hover{width:107px;} 
-    .north-america:hover{width:297px;}
+@media screen and (min-width: 669px) and (max-width: 767px) {
+
+    .pin {top:147px;}
+
 }
 
-@media screen and (min-width: 768px) and (max-width: 868px) 
-{
-    .north-america { width: 300px; position: absolute; top: 5px; left: 5px; }
-    .south-america {width: 104px;position: absolute;top: 156px;left: 116px; }
-    .europe {
-        width: 136px;
-        position: absolute;
-        top: 16px;
-        right: 270px;
-    }
-    .asia {
-        width: 331px;
-        position: absolute;
-        top: 5px;
-        right: 0px;
-    }
-    .africa {
-        width: 141px;
-        position: absolute;
-        top: 108px;
-        left: 327px;
-    }
-    .aunz {
-        width: 154px;
-        position: absolute;
-        right: 15px;
-        top: 219px;
-    }
-
-    .pin {top:95px;}   
-    .aunz:hover{width:164px;} 
-    .africa:hover{width:151px;} 
-    .asia:hover{width:341px;} 
-    .europe:hover{width:146px;} 
-    .south-america:hover{width:114px;} 
-    .north-america:hover{width:310px;}
+@media screen and (min-width: 768px) and (max-width: 868px) {
+.pin { top: 137px; left: 33%; }   
 }
 
 
 @media screen and (min-width: 868px) and (max-width: 968px) {
-    .world-map-container {
-        width: 840px;
-        height:420px;
-    }
-    .north-america {
-        width: 348px;
-        position: absolute;
-        top: 5px;
-        left: 0px;
-    }
-    .south-america {
-        width: 124px;
-        position: absolute;
-        top: 185px;
-        left: 137px;
-    }   
 
-    .asia {
-        width: 357px;
-        position: absolute;
-        top: 5px;
-        right: 0px;
-    }
-    .europe {
-        width: 151px;
-        position: absolute;
-        top: 15px;
-        right: 291px;
-    }
-    .africa {
-        width: 183px;
-        position: absolute;
-        top: 115px;
-        left: 377px;
-    }
-    .aunz {
-        width: 211px;
-        position: absolute;
-        right: 15px;
-        top: 234px;
-    }
-
-    .pin {top:120px;}  
-
-    .aunz:hover{width:221px;} 
-    .africa:hover{width:193px;} 
-    .asia:hover{width:367px;} 
-    .europe:hover{width:161px;} 
-    .south-america:hover{width:134px;} 
-    .north-america:hover{width:358px;}    
+    .pin {top:169px; left: 32%;}  
 
 }
 
 @media screen and (min-width: 969px) and (max-width: 1068px) {
-    .world-map-container {
-        width: 940px;
-        height:550px;
-    }
-    .north-america {
-        width: 400px;
-        position: absolute;
-        top: 5px;
-        left: 0px;
-    }
-    .south-america {
-        width: 153px;
-        position: absolute;
-        top: 212px;
-        left: 153px;
-    }   
 
-    .asia {
-        width: 433px;
-        position: absolute;
-        top: 4px;
-        right: 3px;
-    }
-    .europe {
-        width: 191px;
-        position: absolute;
-        top: 15px;
-        right: 353px;
-    }
-
-    .africa {
-        width: 216px;
-        position: absolute;
-        top: 141px;
-        left: 375px;
-    }
-
-    .aunz {
-        width: 252px;
-        position: absolute;
-        right: 15px;
-        top: 307px;
-    }
-
-    .pin {top:150px; left:25%;}  
-
-    .aunz:hover{width:262px;} 
-    .africa:hover{width:226px;} 
-    .asia:hover{width:453px;right: -20px;} 
-    .europe:hover{width:201px;} 
-    .south-america:hover{width:163px;} 
-    .north-america:hover{width:410px;}    
-
+    .pin {top:240px; }  
 }
 
 @media screen and (min-width: 1069px) {
-    .world-map-container {
-        width: 940px;
-        height:550px;
-    }
-    .north-america {
-        width: 400px;
-        position: absolute;
-        top: 5px;
-        left: 0px;
-    }
-    .south-america {
-        width: 153px;
-        position: absolute;
-        top: 212px;
-        left: 153px;
-    }   
+    .pin { top:237px; } 
 
-    .asia {
-        width: 433px;
-        position: absolute;
-        top: 4px;
-        right: 3px;
-        z-index:1;
-    }
-    .europe {
-    width: 175px;
-    position: absolute;
-    top: 20px;
-    right: 365px;
-    z-index: 2;
-    }
-
-    .africa {
-        width: 216px;
-        position: absolute;
-        top: 141px;
-        left: 375px;
-    }
-
-    .aunz {
-        width: 252px;
-        position: absolute;
-        right: 15px;
-        top: 307px;
-    }
-
-        .pin {top:150px; left:27%;} 
-
-    .aunz:hover{width:262px;} 
-    .africa:hover{width:226px; top: 151px;} 
-    .asia:hover{width:453px; right: -20px;} 
-    .europe:hover{width:201px; right: 375px; top:5px;} 
-    .south-america:hover{width:163px;} 
-    .north-america:hover{width:410px;left:-10px;}    
 }
+
 
 @media screen and (min-width: 320px) and (max-width: 510px) {
-    .world-map-container {
-        display:none;
-    }
-    ul.country-list { 
-        margin-top: 80px; }
-    .page-container {
-        background-image:none;
-    }
 
-    .footer-container {
-        padding-top:50px;
-    }
+    ul.country-list { margin-top: 80px; }
+    .page-container { background-image:none;}
+    .footer-container { padding-top:50px;}
 }   
 
-.europe-large {
-    margin: 0 auto;
-    display: block;
+
+.europe-large { margin: 0 auto; display: block;}
+.vector-skyline { width:100%; }
+
+.main { font-size: 500px; }
+
+
+
+
+@media screen and (min-width: 1651px) {
+    .map-wrld-na { left: 1%; top: 0; font-size: 18em; }
+    .map-wrld-sa { font-size: 17em; top: 47%; left: 9%;}
+    .map-wrld-oc { bottom: 13px; right: 103px; font-size: 14em; }
+    .map-wrld-eu{ top: 8.5%; left: 34.8%; font-size: 14.8em; }
+    .map-wrld-as{ top: 23.5%; right: 18.5%; font-size: 20em; z-index: 100; }
+    .map-wrld-af{ top: 45%; left: 36%; font-size: 16em; }
+    .map-wrld-me{ top: 40.2%; right: 40%; font-size: 8em; z-index: 102; }
+    .map-ru { top: -28%; right: 7%; font-size: 32em; z-index: 50;}
+    .map-ru:hover { top: -29%; right: 6%; }
+    .map-wrld-me:hover{ font-size: 9em;z-index: 999; }
+    .map-wrld-af:hover { top: 46% }
+    .map-wrld-eu:hover { top: 7.5%; left: 33.8%; }
+    .map-wrld-as:hover { top:24.5%; right: 17.5%; }
+    .map-wrld-oc:hover { bottom: 4px; right: 90px; }
+    .map-wrld-sa:hover { left: 8%; }
+    .map-wrld-na:hover { left: 0%; }
 }
 
-.pin {
-    position: absolute;
-    width: 40px;
-    height:40px;
-    left:24%;
+@media screen and (min-width: 560px) and (max-width: 1650px) {
+    .map-wrld-oc { bottom: 26px; right: 50px; font-size: 196px; }
+    .map-wrld-sa { font-size: 17vw; top: 18vw; left: 6vw;}
+    .map-wrld-na { left: 0; top: 0; font-size: 18vw; }
+    .map-wrld-eu{ top: 3vw; left: 25vw; font-size: 14vw; }
+    .map-wrld-as{ top: 147px; right: 152px; font-size: 266px; z-index: 100; }
+    .map-wrld-af{ top: 16vw; left: 25vw; font-size: 16vw; }
+    .map-wrld-me{ top: 225px; right: 373px; font-size: 100px; z-index: 102; }
+    .map-ru { top: -136px; right: 8px; font-size: 460px; }
+
+    .world-map-container  {width: 100%; height: 0px; padding: 25.5%;}
 }
 
-.vector-skyline {
-    width:100%;
+
+@media screen and (min-width: 100px) and (max-width: 560px) 
+{
+    .world-map-container { display: none; }
 }
