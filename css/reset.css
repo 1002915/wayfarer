@@ -21,6 +21,8 @@ time, mark, audio, video {
 	/*color: #c84348; <-- red colour */
 }
 
+a { color: #f2f2f2; }
+
 body {min-height: 100vh; }
 h1, h2, h3, h4, h5, h6, li, span {
 	font-family: 'Source Code Pro', monospace;

@@ -24,9 +24,9 @@ $(document).ready(function() {
   if (timezone !== null) {
     var timezone = '<?php echo $cityTimezone ?>';
     // instantiate a moment object
-    var NowMoment = moment().subtract( 10, 'hours');
+    var NowMoment = moment().subtract(timezone, 'hours').format('llll');
     // instantiate a JavaScript Date object
-    var NowDate = new Date();
+    //  var NowDate = new Date();
     // display value of moment object in #displayMoment div
     var eDisplayMoment = document.getElementById('displayMoment');
     eDisplayMoment.innerHTML = NowMoment;
@@ -36,8 +36,12 @@ $(document).ready(function() {
 });
 
 
+<?php if(!isset($CITY)){
+  $CITY = 'London';
+}
+?>
 // Set the city page to a variable for JSON / AJAX 
-var cityInput = '<?php echo $cityName ?>';
+var cityInput = '<?php echo $CITY ?>';
 // If the city name is not empty:
 if (cityInput !== null) {
 

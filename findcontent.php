@@ -1,28 +1,46 @@
-  <div class="ig-title" data-aos="fade-right">
-    <h6>Click on a continent to explore</h6>
-  </div>
-<div class="world-map-container top-margin">
+    <div class="ig-title world-view" data-aos="fade-right">
+        <h6>Click on a Marker to explore</h6>
+    </div>
+    <div class="world-map-container">
+        <div id="world-map" style="width: 100%; height: 100%"></div>
+    </div>
 
+ <script>
+$(function(){
 
-<a href="javascript:delay('find.php')"><i class="mg map-wrld-oc zoomTarget" data-targetsize="0.55"></i></a><!--OCEANA-->
-<a href="javascript:delay('find.php')"><i class="mg map-wrld-sa zoomTarget" data-targetsize="0.75"></i></a><!--SOUTH AMERICA-->
-<a href="javascript:delay('find.php')"><i class="mg map-wrld-na zoomTarget" data-targetsize="0.85"></i></a><!--NORTH AMERICA-->
-<a href="javascript:delay('europe.php')"><i class="mg map-wrld-eu zoomTarget" data-targetsize="0.80"></i></a><!--EUROPE-->
-<a href="javascript:delay('find.php')"><i class="mg map-wrld-as zoomTarget" data-targetsize="0.95"></i></a><!--ASIA-->
-<a href="javascript:delay('find.php')"><i class="mg map-wrld-af zoomTarget" data-targetsize="0.75"></i></a><!--AFRICA-->
-<a href="javascript:delay('find.php')"><i class="mg map-wrld-me zoomTarget" data-targetsize="0.75"></i></a><!--MIDDLE EAST-->
-<a href="javascript:delay('find.php')"><i class="mg map-ru      zoomTarget" data-targetsize="0.75"></i></a><!--MIDDLE EAST-->
+    // ADD CITY NAMES/MARKERS HERE:
+    var markers = [
+        {latLng: [53, 0.5], name: "London", weburl : "london.php?city=London&timezone=10", status : "mrk"},
+        {latLng: [-27.5, 153], name: "Brisbane", weburl : "london.php?city=Brisbane&timezone=0", status : "mrk"},
+        {latLng: [41, 28.98], name: "Istanbul", weburl : "london.php?city=Istanbul&timezone=7", status : "mrk"}
+    ];
 
-</div>
-
-
-    <ul class="country-list">
-      <li class="country-list-item"><a href="northamerica.php" class="animsition-link">NORTH AMERICA</a></li>
-      <li class="country-list-item">SOUTH AMERICA</li>
-      <li class="country-list-item">AUSTRALIA</li>
-      <a class="country-list-item" href="europe.html"><li>EUROPE</li></a>
-      <li class="country-list-item">ASIA</li>
-      <li class="country-list-item">ANTARCTICA</li>  
-    </ul>
-
-</div>
+    $('#world-map').vectorMap({
+        map: 'world_mill_en',
+        backgroundColor: 'none',
+        markers: markers,
+            onMarkerClick: function(even, index) {
+                window.location.href = markers[index].weburl;
+            },
+        regionStyle: 
+        {
+            initial: { fill: '#fcf5d0'},
+            hover: {fill: '#fcf5d0'},
+        },
+        markerStyle: 
+        {
+            initial: { fill: '#d4595d', stroke: '#383f47'}
+        },
+        series: {
+            markers: [{ 
+                attribute: 'image', 
+                scale: { 
+                    'mrk': 'images/pin2.png'
+                },
+                values: markers.reduce(function(p, c, i){ p[i] = c.status; return p }, {}), 
+                
+                }]
+            }
+  });
+});
+  </script>

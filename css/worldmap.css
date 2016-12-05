@@ -1,5 +1,5 @@
 .country-map-container { min-height: 500px; width: 500px; margin-top: 40px; box-sizing: border-box; padding: 10px; }
-.world-map-container { position:relative; height: 600px; width: 100%; box-sizing: border-box; padding: 10px; margin: 0 auto; background-color: rgba(0, 0, 0, 0.19); }
+.world-map-container { position:relative; height: 600px; width: 100%; box-sizing: border-box; padding: 0px 10px 10px 10px; margin: 0 auto; }
 
 .country-list { margin: 0 auto; display: flex; justify-content: center; flex-wrap: wrap; }
 .country-list-item:hover { box-shadow: 0 14px 28px rgba(0,0,0,0.25),0 10px 10px rgba(0,0,0,0.22); }
@@ -23,7 +23,7 @@
 
 
 
-@media screen and (min-width: 511px) and (max-width: 668px) {
+@media screen and (min-width: 511px) and (max-width:     668px) {
 
     .pin {top: 96px;}
 
@@ -102,11 +102,12 @@
     .map-wrld-me{ top: 225px; right: 373px; font-size: 100px; z-index: 102; }
     .map-ru { top: -136px; right: 8px; font-size: 460px; }
 
-    .world-map-container  {width: 100%; height: 0px; padding: 25.5%;}
+    .world-map-container  {width: 100%; }
 }
 
 
 @media screen and (min-width: 100px) and (max-width: 560px) 
 {
-    .world-map-container { display: none; }
+    .world-map-container {padding: 0px; height: 400px;}
+    .jvectormap-marker { width: 15px; height: 15px; }
 }

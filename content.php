@@ -4,7 +4,7 @@
   <h1>WAYFARER</h1>
   <h4>Your starting point for finding inspiration and guidance to the world.</h4>
   <form action="javascript:delay('find.php')">
-    <input data-targetsize="0.4" class="zoomTarget"  type="submit" value="GET LOST" name="getlost">
+    <input data-targetsize="0.4" class=""  type="submit" value="GET LOST" name="getlost">
   </form>
 </div>
 <div class="london-container" data-aos="fade-up"></div>
