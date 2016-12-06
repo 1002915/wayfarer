@@ -1,23 +1,46 @@
-<div class="world-map-container">
-
-    <div class="animsition">
-        <a href="javascript:delay('europe.php')"><image title="North America" class="north-america zoomTarget" data-targetsize="0.85" src="images/continents/continent_north_america.svg"/></a>
-        <a href="javascript:delay('europe.php')"><image data-targetsize="0.80" title="Europe" class="europe zoomTarget" src="images/continents/Eu-01.svg"/></a>
-        <a href="javascript:delay('index.php')"><image title="Asia" class="asia zoomTarget" data-targetsize="0.95" src="images/continents/Asia.svg"/></a>
-        <a href="javascript:delay('index.php')"><image title="South America" class="south-america zoomTarget" data-targetsize="0.75" src="images/continents/continent_south_america.svg"/></a>
-        <a href="javascript:delay('index.php')"><image title="Africa" class="africa zoomTarget" data-targetsize="0.75" src="images/continents/continent_africa.svg"/></a>
-        <a href="javascript:delay('index.php')"><image title="Australia & New Zealand " class="aunz zoomTarget" data-targetsize="0.55" src="images/continents/continent_aunz.svg"/></a>
+    <div class="ig-title world-view" data-aos="fade-right">
+        <h6>Click on a Marker to explore</h6>
     </div>
-</div>
-</div>
-</div>
-</div>
-    <ul class="country-list">
-      <li class="country-list-item"><a href="northamerica.php" class="animsition-link">NORTH AMERICA</a></li>
-      <li class="country-list-item">SOUTH AMERICA</li>
-      <li class="country-list-item">AUSTRALIA</li>
-      <a class="country-list-item" href="europe.html"><li>EUROPE</li></a>
-      <li class="country-list-item">ASIA</li>
-      <li class="country-list-item">ANTARCTICA</li>  
-    </ul>
+    <div class="world-map-container">
+        <div id="world-map" style="width: 100%; height: 100%"></div>
+    </div>
 
+ <script>
+$(function(){
+
+    // ADD CITY NAMES/MARKERS HERE:
+    var markers = [
+        {latLng: [53, 0.5], name: "London", weburl : "london.php?city=London&timezone=10", status : "mrk"},
+        {latLng: [-27.5, 153], name: "Brisbane", weburl : "london.php?city=Brisbane&timezone=0", status : "mrk"},
+        {latLng: [41, 28.98], name: "Istanbul", weburl : "london.php?city=Istanbul&timezone=7", status : "mrk"}
+    ];
+
+    $('#world-map').vectorMap({
+        map: 'world_mill_en',
+        backgroundColor: 'none',
+        markers: markers,
+            onMarkerClick: function(even, index) {
+                window.location.href = markers[index].weburl;
+            },
+        regionStyle: 
+        {
+            initial: { fill: '#fcf5d0'},
+            hover: {fill: '#fcf5d0'},
+        },
+        markerStyle: 
+        {
+            initial: { fill: '#d4595d', stroke: '#383f47'}
+        },
+        series: {
+            markers: [{ 
+                attribute: 'image', 
+                scale: { 
+                    'mrk': 'images/pin2.png'
+                },
+                values: markers.reduce(function(p, c, i){ p[i] = c.status; return p }, {}), 
+                
+                }]
+            }
+  });
+});
+  </script>

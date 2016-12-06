@@ -1,56 +1,9 @@
 <!-- Put all JQuery and other script here. -->
 <script type="text/javascript">
 
-$(document).ready(function() {
-  $('.popup-gallery').magnificPopup({
-    delegate: 'a',
-    type: 'image',
-    tLoading: 'Loading image #%curr%...',
-    mainClass: 'mfp-img-mobile',
-    gallery: {
-      enabled: true,
-      navigateByImgClick: true,
-      preload: [0,1] // Will preload 0 - before current, and 1 after the current image
-    },
-    image: {
-      tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
-      titleSrc: function(item) {
-        return item.el.attr('title') + '<small>by Marsel Van Oosten</small>';
-      }
-    }
-  });
-});
+// Div animation options
+AOS.init({duration: 1200});
 
-  $(".modal_trigger").leanModal({top: 40, overlay:1, closeButton: ".modal_close" });
-
-  $(function(){
-          // Calling REGISTER Form
-    $(".loginbutton").click(function(){
-      $("#register-form").hide();
-      $("#files_modal").hide();
-      $("#login-modal").show();
-      $(".title_span").text('Register');
-      return false;
-    });
-      // Calling REGISTER Form
-    $(".registerbutton").click(function(){
-      $("#register-form").show();
-      $("#files_modal").hide();
-      $("#login-modal").hide();
-      $(".title_span").text('Register');
-      return false;
-    });
-    // Calling REGISTER Form
-    $(".register").click(function(){
-      $("#register-form").show();
-      $("#files_modal").hide();
-      $("#login-modal").hide();
-      $(".title_span").text('Register');
-      return false;
-    });
-  })
-</script>
-<script>
 // Displays information when hovering over countries
 $(document).ready(function(){
     $('[data-toggle="tooltip"]').tooltip(); 
@@ -61,23 +14,19 @@ $(document).ready(function() {
 });
 
 // Sets a delay on the world map URL's so the animation can play out.
-function delay (URL) {
-    setTimeout( function() { window.location = URL }, 500 );
-}
+function delay (URL) { setTimeout( function() { window.location = URL }, 500 );}
 
-    $(document).ready(function() {
-      $(".animsition").animsition();
-    }); 
+// Full screen loading activator.
+$(document).ready(function() { $(".animsition").animsition();}); 
 
-
-// Moment.JS function.
+// Moment.JS function. Gets the time for a specific location.
 $(document).ready(function() {
   if (timezone !== null) {
     var timezone = '<?php echo $cityTimezone ?>';
     // instantiate a moment object
-    var NowMoment = moment().subtract( 10, 'hours');
+    var NowMoment = moment().subtract(timezone, 'hours').format('llll');
     // instantiate a JavaScript Date object
-    var NowDate = new Date();
+    //  var NowDate = new Date();
     // display value of moment object in #displayMoment div
     var eDisplayMoment = document.getElementById('displayMoment');
     eDisplayMoment.innerHTML = NowMoment;
@@ -87,11 +36,16 @@ $(document).ready(function() {
 });
 
 
+<?php if(!isset($CITY)){
+  $CITY = 'London';
+}
+?>
 // Set the city page to a variable for JSON / AJAX 
-var cityInput = '<?php echo $cityName ?>';
+var cityInput = '<?php echo $CITY ?>';
 // If the city name is not empty:
 if (cityInput !== null) {
 
+// Create a function that gets the city details via weather API.
 function getWeather(cityInput, callback) {
   var city = cityInput;
   var format = '&units=metric';
@@ -109,7 +63,7 @@ function getWeather(cityInput, callback) {
       console.log(data.main.temp);
     }
   }).done(function ( data ) {
-  $('#weather').append(data.main.temp + ' Degrees C');
+  $('#weather').append(data.main.temp + ' °C');
 });       
 }
 

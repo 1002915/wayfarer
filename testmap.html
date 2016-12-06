@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jVectorMap demo</title>
+  <link rel="stylesheet" href="css/jquery-jvectormap-2.0.3.css" type="text/css" media="screen"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="js/jquery-jvectormap-2.0.3.min.js"></script>
+  <script src="js/jquery-jvectormap-world-mill-en.js"></script>
+  <script src="js/jquery-jvectormap-continents-mill.js"></script>
+</head>
+<body>
+  <div id="world-map" style="width: 100%; height: 100vh"></div>
+  <script>
+    $(function(){
+    	$('#world-map').vectorMap({
+      		map: 'continents_mill',
+      		backgroundColor: 'none',
+      		regionStyle: {
+      			initial: { 
+      				fill: '#fcf5d0'
+      			},
+      			hover: {
+      				fill: '#c84348'
+      			},
+      		}
+      	});
+    });
+  </script>
+</body>
+</html>

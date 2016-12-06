@@ -1,168 +1,134 @@
-<?php 
-
-$cityTimezone = 10;
-$population = '8.764 Million (2015)';
-$beerCost = '£4.50 = ($8.71 AUD)';
-?>
-
-	    <div class="catchy-title">
-	        <h6><?php setTitle($cityName); ?></h6>
-	    </div>
-			<img class="vector-skyline" src="images/cities/<?php setImage($cityName); ?>.svg">
-		</div>
+<img class="vector-skyline" src="images/cityscapes/<?php echo $CITY;?>.svg">
+<div class="ig-grid" data-aos="fade-up"> <!-- INFOGRAPHIC START HERE -->
+	<div class="ig-title" data-aos="fade-right">
+		<h6>We thought you should know...</h6>
 	</div>
-</div>
+		<div class="ig-row" data-aos="fade-up">
+			<div class="ig-item-4">
+				<div class="ig-img">
+					<img class="ig-info-icon-4" src="images/icons/weather.svg">
+				</div>
+				<div class="ig-info"><span><div id="weather"> </div></span><br></div>
+			</div>
+			<div class="ig-item-4">
+				<div class="ig-img">
+					<img class="ig-info-icon-4" src="images/icons/time.svg">
+				</div>
+				<div class="ig-info"><span><div id="displayMoment"></div></span><br></div>
+			</div>
+			<div class="ig-item-4">
+				<div class="ig-img">
+					<img class="ig-info-icon-4" src="images/icons/speak.svg">
+				</div>
+				<div id="language" class="ig-info"><?php echo $LANGUAGE;?></div>
+			</div>
+			<div class="ig-item-4">
+				<div class="ig-img">
+					<img class="ig-info-icon-4" src="images/icons/passport.svg">
+				</div>
+				<div id="passport" class="ig-info"><?php echo $PASSPORT;?></div>
+			</div>
+		</div>
 
-<div class="information-container">
-	<h6> Overview </h6>
-</div>
-	<div class="information-container">
-	    <div class="thumbnail">
-	    	<div class="information-container">
-				<div class="country-big-info-block">
-					<span> Overall Rating: ***** </span><br><br>
-		    		<span> Local Time:<div id="displayMoment"></div></span><br>
-		    		<span> Current Temp:<div id="weather"> </div></span><br>
-		    		<span> Population: <?php echo $population; ?></span><br><br>
-		    		<span> Average pint cost: <?php echo $beerCost; ?> </span><br><br>
-		    		<span> <?php setDescription($cityName); ?></span>
+	<div class="ig-title" data-aos="fade-right">
+		<h6>And you should go see...</h6>
+	</div>
+	
+		<div class="ig-row" data-aos="fade-up">
+			<div class="ig-item-2">
+				<div class="ig-img-2">
+					<img class="ig-info-icon-4" src="images/landmarks/<?php echo $CITY;?>/<?php echo $CITY;?>_1.svg">
+				</div>
+				<div class="info-container">
+					<div class="ig-info ig-2"><?php echo $LANDMARK_ONE;?></div>
+					<div class="ig-info ig-small"><?php echo $DESCRIPTION_ONE;?></div>
+				</div>
+			</div>
+
+			<div class="ig-item-2">
+				<div class="ig-img-2">
+					<img class="ig-info-icon-4" src="images/landmarks/<?php echo $CITY;?>/<?php echo $CITY;?>_2.svg">
+				</div>
+				<div class="info-container">
+					<div class="ig-info ig-2"><?php echo $LANDMARK_TWO;?></div>
+					<div class="ig-info ig-small"><?php echo $DESCRIPTION_TWO;?></div>
 				</div>
 			</div>
 		</div>
+		<div class="ig-row" data-aos="fade-up">
+			<div class="ig-item-2">
+				<div class="ig-img-2">
+					<img class="ig-info-icon-4" src="images/landmarks/<?php echo $CITY;?>/<?php echo $CITY;?>_3.svg">
+				</div>
+				<div class="info-container">
+					<div class="ig-info ig-2"><?php echo $LANDMARK_THREE;?></div>
+					<div class="ig-info ig-small"><?php echo $DESCRIPTION_THREE;?></div>
+				</div>
+			</div>
+			<div class="ig-item-2">
+				<div class="ig-img-2">
+					<img class="ig-info-icon-4" src="images/landmarks/<?php echo $CITY;?>/<?php echo $CITY;?>_4.svg">
+				</div>
+				<div class="info-container">
+					<div class="ig-info ig-2"><?php echo $LANDMARK_FOUR;?></div>
+					<div class="ig-info ig-small"><?php echo $DESCRIPTION_FOUR;?></div>
+				</div>
+			</div>
+		</div>
+	
+	<div class="ig-title" data-aos="fade-right"">
+		<h6>But don't forget..</h6>
 	</div>
-</div>
- 
-<div class="information-container">
-	<h6> Traveller photos </h6>
-</div>
-<div class="information-container">
-<div class="popup-gallery">
-	<a class="link-flex" href="user/images/13.jpg" title="The Cleaner"><img 			src="user/images/13.jpg" 			width="100%"></a>
-	<a class="link-flex" href="user/images/14.jpg" title="Winter Dance"><img 			src="user/images/14.jpg" 			width="100%"></a>
-	<a class="link-flex" href="user/images/12.jpg" title="The Uninvited Guest"><img 	src="user/images/12.jpg" 			width="100%"></a>
-	<a class="link-flex" href="user/images/13.jpg" title="Oh no, not again!"><img 	src="user/images/13.jpg" 			width="100%"></a>
-</div>
-	</div>
-</div>
 
-<div class="information-container">
-	<h6> Traveller Reviews </h6>
-</div>
+		<div class="ig-row" data-aos="fade-up">
+			<div class="ig-item-3">
+				<div class="ig-img-3">
+					<img class="ig-info-icon-4" src="images/icons/tip.svg">
+				</div>
+				<div class="ig-info">Tipping:<BR><?php echo $TIPPING;?></div>
+			</div>
+			<div class="ig-item-3">
+				<div class="ig-img-3">
+					<img class="ig-info-icon-4" src="images/icons/tourist.svg">
+				</div>
+				<div class="ig-info">Peak season:<BR><?php echo $PEAK_SEASON;?></div>
+			</div>
+			<div class="ig-item-3">
+				<div class="ig-img-3">
+					<img class="ig-info-icon-4" src="images/icons/currency.svg">
+				</div>
+				<div class="ig-info">Average beer:<BR><?php echo $AVERAGE_BEER;?></div>
+			</div>
+		</div>
 
-<div class="information-container">
-	<div class="row">
-	  <div class="col-sm-6 col-md-4">
-	    <div class="thumbnail">
-	      <img src="user/images/12.jpg" alt="...">
-	      <div class="caption">
-	        <p class="review-title">LONDON WAS REALLY SWEET</p>
-	        <p class="reviewed-by">Reviewed by: Matt Neal on: 16/05/1987</p><br>
-			<p class="review-rating">4 out of 5 Stars</p>
-	        <p class="review-content">Here's a generic entry about London. I can't believe this is a description.</p>
-	        <p><a href="#" class="btn btn-default" role="button">Read more</a></p>
-	      </div>
-	    </div>
-	  </div>
-	  <div class="col-sm-6 col-md-4">
-	    <div class="thumbnail">
-	      <img src="user/images/12.jpg" alt="...">
-	      <div class="caption">
-	        <p class="review-title">LONDON WAS REALLY SWEET</p>
-	        <p class="reviewed-by">Reviewed by: Matt Neal on: 16/05/1987</p><br>
-			<p class="review-rating">4 out of 5 Stars</p>
-	        <p class="review-content">Here's a generic entry about London. I can't believe this is a description.</p>
-	        <p><a href="#" class="btn btn-default" role="button">Read more</a></p>
-	      </div>
-	    </div>
-	  </div>
-	  <div class="col-sm-6 col-md-4">
-	    <div class="thumbnail">
-	      <img src="user/images/12.jpg" alt="...">
-	      <div class="caption">
-	        <p class="review-title">LONDON WAS REALLY SWEET</p>
-	        <p class="reviewed-by">Reviewed by: Matt Neal on: 16/05/1987</p><br>
-			<p class="review-rating">4 out of 5 Stars</p>
-	        <p class="review-content">Here's a generic entry about London. I can't believe this is a description.</p>
-	        <p><a href="#" class="btn btn-default" role="button">Read more</a></p>
-	      </div>
-	    </div>
-	  </div>
-	</div>
-		<div class="row">
-	  <div class="col-sm-6 col-md-4">
-	    <div class="thumbnail">
-	      <img src="user/images/12.jpg" alt="...">
-	      <div class="caption">
-	        <p class="review-title">LONDON WAS REALLY SWEET</p>
-	        <p class="reviewed-by">Reviewed by: Matt Neal on: 16/05/1987</p><br>
-			<p class="review-rating">4 out of 5 Stars</p>
-	        <p class="review-content">Here's a generic entry about London. I can't believe this is a description.</p>
-	        <p><a href="#" class="btn btn-default" role="button">Read more</a></p>
-	      </div>
-	    </div>
-	  </div>
-	  <div class="col-sm-6 col-md-4">
-	    <div class="thumbnail">
-	      <img src="user/images/12.jpg" alt="...">
-	      <div class="caption">
-	        <p class="review-title">LONDON WAS REALLY SWEET</p>
-	        <p class="reviewed-by">Reviewed by: Matt Neal on: 16/05/1987</p><br>
-			<p class="review-rating">4 out of 5 Stars</p>
-	        <p class="review-content">Here's a generic entry about London. I can't believe this is a description.</p>
-	        <p><a href="#" class="btn btn-default" role="button">Read more</a></p>
-	      </div>
-	    </div>
-	  </div>
-	  <div class="col-sm-6 col-md-4">
-	    <div class="thumbnail">
-	      <img src="user/images/12.jpg" alt="...">
-	      <div class="caption">
-	        <p class="review-title">LONDON WAS REALLY SWEET</p>
-	        <p class="reviewed-by">Reviewed by: Matt Neal on: 16/05/1987</p><br>
-			<p class="review-rating">4 out of 5 Stars</p>
-	        <p class="review-content">Here's a generic entry about London. I can't believe this is a description.</p>
-	        <p><a href="#" class="btn btn-default" role="button">Read more</a></p>
-	      </div>
-	    </div>
-	  </div>
-	</div>
-</div>
-<!--
-<?php 
+		<div class="ig-title" data-aos="fade-right">
+			<h6>And you've GOT to try...</h6>
+		</div>
 
-$select = "SELECT * FROM review WHERE R_City = '$cityName'";
-$result = mysqli_query($mysqli, $select);
+		<div class="ig-row" data-aos="fade-up">
+			<div class="ig-item-4">
+				<div class="ig-info ig-2"><?php echo $FOOD_ONE;?><BR><BR><?php echo $FOOD_TWO;?><BR><BR><?php echo $FOOD_THREE;?></div>
+			</div>
+			<div class="ig-item-4 burger">
+				<div class="ig-img">
+					<img class="ig-info-icon-4" src="images/icons/food.svg">
+				</div>
+			</div>			
+		</div>
 
-while($row = mysqli_fetch_array($result))
-{
-	$id = $row['ID'];
-	$R_TITLE = $row['R_TITLE'];
-	$R_CONTENT = $row['R_CONTENT'];
-	$R_BY = $row['R_BY'];
-	$R_TIME = $row['R_TIME'];
-	$R_DATE = $row['R_DATE'];
-	$R_DRAFT = $row['R_DRAFT'];
-	$R_RATING = $row['R_RATING'];
-	$R_City = $row['R_City'];
+		<div class="ig-title" data-aos="fade-right">
+			<h6>You can get around by...</h6>
+		</div>
 
-	echo 
-	'<div class="information-container flex">'.
-		'<div class="left-review">'. 
-			'<p class="review-title">'.$R_TITLE . '</p>'.
-			'<p class="review-rating">'.$R_RATING . ' out of 5 Stars</p>'.
-			'<p class="reviewed-by">Reviewed by: '.$R_BY. 'on:'. $R_TIME.'</p><br>'.
-			'<p class="review-content">'.$R_CONTENT.'</p>'.
+		<div class="ig-row" data-aos="fade-up">
+			<div class="ig-item-4 burger">
+				<div class="ig-img">
+					<img class="ig-info-icon-4" src="images/icons/transport.svg">
+				</div>
+			</div>
+			<div class="ig-item-4">
+				<div class="ig-info ig-2"><?php echo $TRANSPORT_ONE;?><BR><BR><?php echo $TRANSPORT_TWO;?></div>
+			</div>
+		</div>
 
-
-		'</div>'.	
-		'<div class="right-review" style="background-image:url(images/london.svg);">&nbsp;</div>'.
-	'</div>';
-}
-
-?>
-
--->
-
-
-</div>
-</div>	
+</div> <!-- ig box end -->

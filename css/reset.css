@@ -16,11 +16,14 @@ time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
-	font-family: 'Raleway', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	vertical-align: baseline;
 	/*color: #c84348; <-- red colour */
 }
 
+a { color: #f2f2f2; }
+
+body {min-height: 100vh; }
 h1, h2, h3, h4, h5, h6, li, span {
 	font-family: 'Source Code Pro', monospace;
 }
@@ -41,18 +44,18 @@ h2 {
 h3 {
 	font-family: 'Source Code Pro', monospace;
 	font-weight: 700;
-	color: #393e46;;
+	color: #fff;
 }
 
 h4 {
-	font-weight: 400;;;;
+	font-weight: 400;
 	font-size: 1.8em;
 	text-align:center;
 	color: #f2f2f2;
 	line-height: 1.4;
 	font-family: 'Raleway', sans-serif;
 	letter-spacing: 1px;
-	max-width: 500px;;;;
+	max-width: 500px;
 }
 
 h5 {
@@ -66,8 +69,7 @@ h5 {
 }
 
 h6 {
-	font-weight: 700;
-	font-size: 3em;
+	font-size: 1.8em;
 	font-family: 'Raleway', sans-serif;
 }
 
@@ -102,3 +104,5 @@ label { color:black; font-size: 0.9em;}
 span {font-family: 'Raleway', sans-serif;}
 
 a:link { text-decoration:none; }
+
+a {display:inline-block;}
