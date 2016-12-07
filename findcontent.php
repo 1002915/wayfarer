@@ -3,7 +3,7 @@
     </div>
     <div class="alert alert-info alert-dismissible" role="alert">
   <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-  <strong>Help:</strong> Use the map to find a marker and explore that city.
+  <strong>Hi there!</strong> Below is a list of the top locations Wayfarer recommends young travellers should visit. Of course, there are thousands of cities you can explore, but we've curated a nice, easy list for you to check out. Click or tap on an icon to explore that location and learn more about it! Enjoy! - The team at Wayfarer
 </div>
     <div class="world-map-container">
         <div id="world-map" style="width: 100%; height: 100%"></div>
@@ -27,7 +27,7 @@ $(function(){
         {latLng: [35.68, 139.69], name: "Tokyo", weburl : "london.php?city=Tokyo&timezone=7", status : "mrk"},
         {latLng: [38.72, -9.13], name: "Lisbon", weburl : "london.php?city=Lisbon&timezone=7", status : "mrk"},
         {latLng: [25.20, 55.27], name: "Dubai", weburl : "london.php?city=Dubai&timezone=7", status : "mrk"},
-        {latLng: [59.93, 30.33], name: "St. Petersburg", weburl : "london.php?city=StPetersburg&timezone=7", status : "mrk"},
+        {latLng: [59.93, 30.33], name: "St Petersburg", weburl : "london.php?city=St Petersburg&timezone=7", status : "mrk"},
         {latLng: [13.75, 100.50], name: "Bangkok", weburl : "london.php?city=Bangkok&timezone=7", status : "mrk"},
         {latLng: [52.37, 4.89], name: "Amsterdam", weburl : "london.php?city=Amsterdam&timezone=7", status : "mrk"},
         {latLng: [-34.5, 150], name: "Sydney", weburl : "london.php?city=Sydney&timezone=7", status : "mrk"},
@@ -66,7 +66,4 @@ $(function(){
             }
   });
 });
-
-var offset = (new Date().getTimezoneOffset() / 60);
-console.log(offset);
-  </script>
+</script>
