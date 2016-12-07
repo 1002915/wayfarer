@@ -4,10 +4,14 @@
 <head>
   <meta charset="utf-8">
   <title>Wayfarer</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:title" content="Wayfarer.">
-  <meta property="og:description" content="Get Lost.">
-  <meta property="og:image" content="images/ogimage.jpg">
+  <meta name="viewport"                    content="width=device-width, initial-scale=1">
+  <meta property="og:url"                 content="http://www.wayfarertravel.club" />
+  <meta property="og:type"                content="App" />
+  <meta property="og:title"               content="Wayfarer Travel" />
+  <meta property="og:description"         content="Your starting point for finding inspiration and guidance to the world." />
+  <meta property="og:image"               content="http://www.nealweb.design/wayfarertravel.club/images/ogimage.jpg" />
+
+
   <meta name="keywords" content="travel,student,map,world,help,currency,explore,lost,wayfarer,wander,trip,moving">
   <meta name="author" content="Web-Ish">
   <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
@@ -38,7 +42,6 @@
   <link rel="stylesheet" href="css/jquery-jvectormap-2.0.3.css" type="text/css" media="screen"/>
   <script src="js/jquery-jvectormap-2.0.3.min.js"></script>
   <script src="js/jquery-jvectormap-world-mill-en.js"></script>
-  <script src="js/jquery-jvectormap-continents-mill.js"></script>
 </head>
 <body>
 

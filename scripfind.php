@@ -21,7 +21,6 @@ $(document).ready(function() {
   };
 });
 
-
 // Set the city page to a variable for JSON / AJAX 
 var cityInput = '<?php echo $CITY ?>';
 // If the city name is not empty:
