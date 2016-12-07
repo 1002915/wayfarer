@@ -1,8 +1,7 @@
-  <div class="footer-container">
-  </div></div>
+</div>
   	<div class="ig-title-footer">
       <ul>
-        <li><a href="#">ABOUT</a></li>
+        <li><a href="index.php#about">ABOUT</a></li>
         <li>&nbsp;</li>
         <li>&nbsp;</li>
         <li>&nbsp;</li>

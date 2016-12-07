@@ -1,4 +1,15 @@
+<?php $CITY = preg_replace('/\s+/', '', $CITY); ?>
 <img class="vector-skyline" src="images/cityscapes/<?php echo $CITY;?>.svg">
+<div class="ig-grid" data-aos="fade-up">
+	<div class="ig-title" data-aos="fade-right"><h6>So what's all the fuss about?</h6></div>
+	<div class="ig-row" data-aos="fade-up">
+		<div class="ig-info ig-small">
+			<?php echo $DESCRIPTION; ?>
+		</div>
+
+	</div>
+
+</div>
 <div class="ig-grid" data-aos="fade-up"> <!-- INFOGRAPHIC START HERE -->
 	<div class="ig-title" data-aos="fade-right">
 		<h6>We thought you should know...</h6>
