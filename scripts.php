@@ -1,3 +1,8 @@
+<?php if(!isset($TIMEZONE))
+{
+  $TIMEZONE = 0;
+}
+?>
 <!-- Put all JQuery and other script here. -->
 <script type="text/javascript">
 
@@ -21,10 +26,10 @@ $(document).ready(function() { $(".animsition").animsition();});
 
 // Moment.JS function. Gets the time for a specific location.
 $(document).ready(function() {
+  var timezone = '<?php echo $TIMEZONE ?>';
   if (timezone !== null) {
-    var timezone = '<?php echo $cityTimezone ?>';
     // instantiate a moment object
-    var NowMoment = moment().subtract(timezone, 'hours').format('llll');
+    var NowMoment = moment().utcOffset(<?php echo $TIMEZONE ?>).format('llll');
     // instantiate a JavaScript Date object
     //  var NowDate = new Date();
     // display value of moment object in #displayMoment div
@@ -32,6 +37,7 @@ $(document).ready(function() {
     eDisplayMoment.innerHTML = NowMoment;
     // display value of Date object in #displayJsDate div
     var eDisplayDate = document.getElementById('displayJsDate');
+    console.log(timezone);
   };
 });
 

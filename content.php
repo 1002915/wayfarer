@@ -14,8 +14,8 @@
     <h2>WHAT IS WAYFARER?</h2>
     <div class="istanbul-container"></div>
   </div>
-  <div class="about-text" data-aos="fade-down">
-    <h5>“Twenty years from now you will be more disappointed by the things you didn’t do than by the ones you did do.” – Mark Twain</h5><br>
-    <h5>When you're young, travelling alone, or with others can be scary. Wayfarer has listed some of the most popular destinations for young, first time travelers and gives real reviews by real people for those locations.</h5><br>
+  <div id="about" class="about-text" data-aos="fade-down">
+    <h5>“Travel is the only thing you buy that makes you richer.” – Anonymous</h5><br>
+    <h5>We've put together twenty of the world's top destinations for first time travelers to explore. What are you waiting for? Go get inspired!</h5><br>
   </div>
 </div>
